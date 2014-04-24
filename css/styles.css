@@ -1,0 +1,22 @@
+/*Main screen*/
+#head {
+	background: grey; 
+	font-family: 'Ubuntu', sans-serif;
+    font-size:16pt;
+	color:#ddd;
+	padding:0;
+	margin:0;
+    border:0;
+}
+#head img {
+	vertical-align: middle;
+}
+
+#nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 10px;
+	background: yellow;
+	z-index: 100;
+}

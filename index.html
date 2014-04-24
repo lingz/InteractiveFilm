@@ -1,0 +1,196 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">	
+	<head>		
+		<title>Demo 2nd Page</title>
+	</head>
+	<body>	
+		<div id="slides">
+			<div class="slide">
+				<h1>Welcome to the jungle</h1>
+				<form>
+					<b>Please enter code here</b>
+					<textarea name="code" rows="1" cols="40"></textarea>			
+					<input type="submit" value="Go"/>			
+				</form>
+			</div>
+			
+			<div class="slide">
+				<h1>Here is a video</h1>
+				<div class="log"></div>
+			</div>
+			
+			<div class="slide">
+				<h1>Now we have someone talking on stage</h1>
+			</div>
+			
+			<div class="slide">
+				<h1>Here comes another video</h1>
+				<div class="log"></div>
+			</div>
+			
+			<div class="slide">
+				<h1>Bye bye, share and whatever needed</h1>
+			</div>
+		</div>
+        
+		
+		
+		
+		<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
+		<script type='text/javascript' src='//d3dy5gmtp8yhk7.cloudfront.net/2.1/pusher.min.js'></script>
+		<script type='text/javascript' src="js/interlude.slideshow.js"></script>
+		
+		<script type='text/javascript' src='scripts/messaging.js'></script>        
+        <script type='text/javascript' src="scripts/localstorage.js"></script>
+        <script type='text/javascript' src="scripts/remotestorage.js"></script>
+		<script type='text/javascript' src="scripts/interlude.js"></script>
+
+
+		<script type="text/javascript">		
+			$(document).ready(function() {
+			
+				$('#slides').interludeslideshow();
+			
+				function getParameterByName(name) {
+					name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+					var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+						results = regex.exec(window.location.href);
+					return results == null ? null : decodeURIComponent(results[1].replace(/\+/g, " "));
+				}
+			
+				function showMessage(message) {
+					$('#slides').data('interludeslideshow').getCurrentSlide().find('.log').append(message+'<br />');
+				}
+			
+				// try to get the session and project from the query string
+				var sessionId = getParameterByName('session_id');
+				var projectName = getParameterByName('project_name');
+				var currentPlayerId = undefined;
+			
+				function init() {
+					// try to init the interlude SDK
+					interlude.init({
+						role: 'client',
+						projectName: projectName,
+						sessionId: sessionId,
+						filters: {
+							receive: {
+								videoCreateNew: 1, 
+								videoEnded: 1, 
+								play_video: 1, 
+								pause_video: 1, 
+								toggle_play: 1, 
+								stop_video: 1
+							},
+							send: {
+								create_new_version: 1, 
+								play_video: 1, 
+								pause_video: 1, 
+								toggle_play: 1, 
+								stop_video: 1
+							}
+						},
+						listeners: {
+							onInit: function(e) {
+
+								interlude.on('playback.project', function(e) {
+									showMessage('got the player data');
+								});
+							
+								interlude.on('playback.select.start', function(e) {
+									// do something interesting with the DOM with e.something
+									showMessage('time to select');
+									console.log(e);
+								});
+						
+								interlude.on('playback.select.end', function(e) {
+									// do something interesting with the DOM with e.something
+									showMessage('no more selection');
+								});
+
+								interlude.on('playback.vote.start', function(e) {
+									// do something interesting with the DOM with e.something
+									showMessage('time to vote');
+									console.log(e);
+									showMessage('<a id="'+currentPlayerId+e.options[0].node+'" href="#">'+e.options[0].display+'</a> or <a id="'+currentPlayerId+e.options[1].node+'" href="#">'+e.options[1].display+'</a>');
+									$('#'+currentPlayerId+e.options[0].node).click(function() {
+										interlude.trigger('playback.vote', e.node, e.options[0].node, currentPlayerId);
+									});
+									$('#'+currentPlayerId+e.options[1].node).click(function() {
+										interlude.trigger('playback.vote', e.node, e.options[1].node, currentPlayerId);
+									});
+								});
+						
+								interlude.on('playback.vote.end', function(e) {
+									// do something interesting with the DOM with e.something
+									showMessage('no more to voting allowed');
+								});
+							
+								interlude.on('playback.vote.stats', function(e) {
+									// do something interesting with the DOM with e.something
+									//showMessage('here is what we got', e);
+								});
+								interlude.on('session.signin', function(e) {
+									// do something interesting with the DOM with e.something
+									showMessage('you are in the game!');
+								});
+								interlude.on('session.signout', function(e) {
+									// do something interesting with the DOM with e.something
+									showMessage('no soup for you today!');
+								});
+								interlude.on('playback.end', function(e) {
+									// do something interesting with the DOM with e.something
+									showMessage('video got to its end');
+								});
+								interlude.on('playback.replay', function(e) {
+									// do something interesting with the DOM with e.something
+									showMessage('here we go again');
+								});
+							
+															
+								interlude.on('slideshow.move', function(slideIndex) {
+									console.log('slideshow.move', slideIndex);
+									$('#slides').data('interludeslideshow').to(slideIndex);
+									
+									// 
+									if (slideIndex == 1) {
+										currentPlayerId = 'player1';
+									}
+									else if (slideIndex == 3) {
+										currentPlayerId = 'player2';
+									}
+									else {
+										currentPlayerId = undefined;
+									}
+								});	
+								
+								if (e.state['slideshow.move'] !== undefined) {
+									var slideIndex = e.state['slideshow.move'][0];
+									$('#slides').data('interludeslideshow').to(slideIndex);
+								}						
+							}
+						}
+					});
+
+				}
+
+				if (!projectName) {
+					projectName='develop';
+				}
+			
+				var form = $('form');
+				if (!sessionId) {
+					form.show().submit(function(e) {
+						event.preventDefault();
+						sessionId = form.find('textarea').val();
+						form.hide();
+						init();
+					});
+				}
+				else {
+					form.hide();
+					init();
+				}
+			});
+		</script>
+	</body>
+</html>

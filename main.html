@@ -1,0 +1,148 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">	
+	<head>		
+		<title>Main Page Demo</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />	
+	</head>
+	<body>		
+    <div id="nav">
+      <a href="#" id="prev">prev</a>&nbsp|&nbsp<a href="#" id="next">next</a>
+    </div>
+		<div id="slides">
+			<div class="slide">
+				<h1>Welcome to the show!</h1>
+				 <div id='head'>
+					
+				</div>
+			</div>
+			<div class="slide">
+				<h1>Here is a video!</h1>
+				<div id="video1">
+					<object type="application/x-shockwave-flash" data="http://cdn1.interlude.fm/players/flash/2.7.2/Oak_player_as.swf" width="100%" height="75%">
+						<param name="quality" value="high" />
+						<param name="bgcolor" value="#212121" />
+						<param name="wmode" value="opaque" />
+						<param name="allowScriptAccess" value="always" />
+						<param name="allowFullScreen" value="true" />
+						<param name="flashVars" value="project_url=res/devProject.xml&playerID=player1" />				
+					</object>
+				</div>
+			</div>
+			<div class="slide">
+				<h1>Someone is talking on stage</h1>
+			</div>
+			<div class="slide">
+				<h1>Another Video</h1>
+				<div id="video2">
+					<object type="application/x-shockwave-flash" data="http://cdn1.interlude.fm/players/flash/2.7.2/Oak_player_as.swf" width="100%" height="75%">
+						<param name="quality" value="high" />
+						<param name="bgcolor" value="#212121" />
+						<param name="wmode" value="opaque" />
+						<param name="allowScriptAccess" value="always" />
+						<param name="allowFullScreen" value="true" />
+						<param name="flashVars" value="project_url=res/devProject2.xml&playerID=player2" />				
+					</object>
+				</div>	
+			</div>
+			<div class="slide">Bye bye</div>
+		</div>
+				
+				
+				
+		<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
+		<script type='text/javascript' src='//d3dy5gmtp8yhk7.cloudfront.net/2.1/pusher.min.js'></script>
+		<script type='text/javascript' src='js/qrcode.js'></script>
+		<script type='text/javascript' src='js/xml2json.js'></script>
+		<script type='text/javascript' src="js/interlude.slideshow.js"></script>
+		
+		<script type='text/javascript' src='scripts/player.js'></script>        
+		<script type='text/javascript' src='scripts/messaging.js'></script>        
+        <script type='text/javascript' src="scripts/localstorage.js"></script>
+        <script type='text/javascript' src="scripts/remotestorage.js"></script>
+		<script type='text/javascript' src="scripts/interlude.js"></script>
+
+
+		<script type="text/javascript">			   
+			
+			$(document).ready(function() {
+				
+				// init the interlude framework
+				interlude.init({
+					role: 'server',
+					projectName: 'develop',
+					votesQueuePollingInterval: 300,
+					players: [
+						'player1',
+						'player2'
+					],
+					filters: {
+						send: {
+							'videoCreateNew': 1, 
+							'videoEnded': 1, 
+							'play_video': 1, 
+							'pause_video': 1, 
+							'toggle_play': 1, 
+							'stop_video': 1
+						},
+						receive: {
+							'create_new_version': 1, 
+							'play_video': 1, 
+							'pause_video': 1, 
+							'toggle_play': 1, 
+							'stop_video': 1
+						}
+					},
+					listeners: {
+						onInit: function(e) {
+							// do something with the vote stats
+							interlude.on('playback.vote.stats', function(stats) {
+								console.log('playback.vote.stats', stats);
+							});
+							
+							// build the stuff needed to let users join us (QR code, links etc.)
+							$('#head').html(create_qrcode(e.clientURLs.direct)+'Go to <a href="'+e.clientURLs.base+'" target="_blank">'+e.clientURLs.base+'</a> and type '+e.sessionId);
+						}
+					}
+				});
+
+				
+				// setup the slides in an anonymous closure 
+				(function() {
+					// init the slides plugin	
+					$('#slides').interludeslideshow();
+
+					// stop the player on the current slide (if found)
+					function stopPlayerOnCurrentSlide() {
+						var slide = $('#slides').data('interludeslideshow').getCurrentSlide();
+						var player = slide.find('object[data*="Oak_player_as.swf"]');
+						if (player.length > 0) {
+							player.get(0).stop_video();
+						}
+					}
+				
+					// bind listeners for the slides navigation
+					$('#next').click(function(e) {
+						// stop the player (if found)
+						stopPlayerOnCurrentSlide();
+						// move the local slide next
+						var slideIndex = $('#slides').data('interludeslideshow').next();
+						// trigger event for other devices 
+						interlude.trigger('slideshow.move', slideIndex);
+						interlude.state('slideshow.move', slideIndex);
+					});
+					$('#prev').click(function(e) {
+						// stop the player (if found)
+						stopPlayerOnCurrentSlide();
+						// move the local slide next
+						var slideIndex = $('#slides').data('interludeslideshow').prev();
+						// trigger event for other devices 
+						interlude.trigger('slideshow.move', slideIndex);
+						interlude.state('slideshow.move', slideIndex);
+					});
+				}());
+			});
+						
+			
+		</script>		
+	</body>
+</html>
+
