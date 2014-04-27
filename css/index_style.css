@@ -56,6 +56,10 @@ h2 {
 svg {
   display: block;
   margin: 50px auto;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
 }
 
 #loader 
@@ -119,3 +123,40 @@ svg {
   background-size: contain;
 }
 
+.vote {
+  position: absolute;
+  height: 100%;
+  width: 40%;
+  top: 0;
+  background-color: rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+.vote-first {
+  left: 0;
+}
+.button {
+  border: solid 1px white;
+  margin: auto auto;
+  position: absolute;
+  top: 0;
+  height: 40px;
+  left: 10%;
+  bottom: 0;
+  text-align: center;
+  right: 10%;
+  color: white;
+  z-index: 1;
+}
+
+.vote-right {
+  right: 0;
+}
+.absolute-center {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 50px;
+}

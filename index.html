@@ -9,12 +9,23 @@
     <link rel="stylesheet" href="css/index_style.css">
 	</head>
 	<body>	
-		<div id="main">
-		</div>
-		<div id="rotate-message" class="centered-text">
-      <h1>Two Strangers</h1>
-      <p>Please rotate your device into a landscape orientation.</p>
-		</div>
+    <script type="text/javascript">
+      sessionId = "{{idNum}}";
+    </script>
+    {% if idNum %}
+      <div id="main">
+      </div>
+      <div id="rotate-message" class="centered-text">
+        <h1>Two Strangers</h1>
+        <p>Please rotate your device into a landscape orientation.</p>
+      </div>
+    {% else %}
+      <div class="centered-text">
+        <h1>Two Strangers</h1>
+        <p>No Session has been Setup</p>
+      </div>
+    {% end %}
+    <script type="text/javascript" src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
 		<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
 		<script type='text/javascript' src='//d3dy5gmtp8yhk7.cloudfront.net/2.1/pusher.min.js'></script>
 		<script type='text/javascript' src="js/interlude.slideshow.js"></script>

@@ -1,5 +1,6 @@
 /** @jsx React.DOM */
 
+var currentPlayerId = "player1";
 $(document).ready(function() {
 
   $('#slides').interludeslideshow();
@@ -17,9 +18,7 @@ $(document).ready(function() {
   }
 
   // try to get the session and project from the query string
-  var sessionId = "696830";
   var projectName = getParameterByName('project_name');
-  var currentPlayerId;
   var connected = false;
 
   function init() {
@@ -69,15 +68,18 @@ $(document).ready(function() {
             showMessage('time to vote');
             console.log(e);
             React.renderComponent(
-              <WelcomeScreen voteFirst={voteFirst} voteSecond={voteSecond} node={e.node} />,
+              <VoteScreen event={e} />,
               document.getElementById("main")
             );
-
           });
       
           interlude.on('playback.vote.end', function(e) {
             // do something interesting with the DOM with e.something
             showMessage('no more to voting allowed');
+            React.renderComponent(
+              <IdleScreen />,
+              document.getElementById("main")
+            );
           });
         
           interlude.on('playback.vote.stats', function(e) {
@@ -129,6 +131,12 @@ $(document).ready(function() {
                   document.getElementById("main")
                 );
                 break;
+              case 2:
+                React.renderComponent(
+                  <EndScreen />,
+                  document.getElementById("main")
+                );
+                break;
             }
             
             console.log('slideshow.move', slideIndex);
@@ -149,6 +157,10 @@ $(document).ready(function() {
     document.getElementById("main")
   );
   init();
+
+  var preload = new createjs.LoadQueue();
+  for (var i = 1; i < 8; i++)
+  preload.loadFile('/img/' + i + '.jpg');
 
 
 });
