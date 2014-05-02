@@ -6,9 +6,11 @@
 	<body>		
 		<div id="slides">
 			<div class="slide">
-        <div class="absolute-center absolute-center-text">
+        <div id="home" class="absolute-center absolute-center-text">
           <h1>Two Strangers</h1>
           <h2>http://two-strangers.herokuapp.com</h2>
+          <h1 id="player_count">0</h1>
+          <h2>Connected</h2>
         </div>
 			</div>
 			<div class="slide">
@@ -46,6 +48,10 @@
 		<script type="text/javascript">			   
 			
 			$(document).ready(function() {
+        players = {}
+        function updatePlayerCount() {
+          $("#player_count").html(Object.keys(players).length);
+        }
 				
 				// init the interlude framework
 				interlude.init({
@@ -80,6 +86,13 @@
 							});
 							
               $.post("/server", {id: e.sessionId}, function(data){console.log(data);});
+              interlude.on('session.signin', function(e) {
+                console.log(e);
+                if (!players[e.id]) {
+                  players[e.id] = 1;
+                }
+                updatePlayerCount();
+              });
 						}
 					}
 				});

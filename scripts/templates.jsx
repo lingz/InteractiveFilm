@@ -91,25 +91,25 @@ var VoteScreen = React.createClass({
     var image;
     switch (this.props.event.node) {
       case "node_beginning_c761":
-        image = "/img/1.jpg";
+        image = "/img/1.png";
         break;
       case "node_william_c783":
-        image = "/img/2.jpg"; 
+        image = "/img/2.png"; 
         break;
       case "node_allison_c790":
-        image = "/img/3.jpg";
+        image = "/img/3.png";
         break;
       case "node_no_ring_c832": // please swap
-        image = "img/4.jpg";
+        image = "img/4.png";
         break;
       case "node_ring_c825": // please swap
-        image = "/img/5.jpg";
+        image = "/img/5.png";
         break;
       case "node_boyfriend_c839":
-        image = "/img/6.jpg";
+        image = "/img/6.png";
         break;
       case "node_no_boyfriend_c846":
-        image = "/img/7.jpg";
+        image = "/img/7.png";
         break;
     }
     var style = {
