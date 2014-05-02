@@ -160,7 +160,7 @@ $(document).ready(function() {
 
   var preload = new createjs.LoadQueue();
   for (var i = 1; i < 8; i++)
-  preload.loadFile('/img/' + i + '.jpg');
+  preload.loadFile('/img/' + i + '.png');
 
 
 });

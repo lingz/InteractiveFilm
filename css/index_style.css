@@ -128,7 +128,7 @@ svg {
   height: 100%;
   width: 40%;
   top: 0;
-  background-color: rgba(0,0,0,0.4);
+  /*background-color: rgba(0,0,0,0.4);*/
   cursor: pointer;
 }
 .vote-first {
@@ -159,4 +159,18 @@ svg {
   right: 0;
   left: 0;
   height: 50px;
+}
+
+
+#rotate-message p {
+  margin-top: 20px;
+  font-size: 2em;
+}
+
+#rotate-message h1 {
+  font-size: 3.5em;
+}
+
+#rotate-message div {
+  height: 200px;
 }

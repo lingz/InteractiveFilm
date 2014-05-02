@@ -78,7 +78,7 @@ div {
 }
 
 .absolute-center-text {
-  height: 50px;
+  height: 150px;
   text-align: center;
 }
 
@@ -87,5 +87,13 @@ div {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 4em;
+}
+h2 {
+  font-size: 2em;
+}
+
+#player_count {
+  margin-top: 50px;
+
 }
