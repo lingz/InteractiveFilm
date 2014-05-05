@@ -1,4 +1,5 @@
 html, body {
+  font-family: 'Lusitana', serif;
   background: black;
   color: white;
   width: 100%;
@@ -173,4 +174,29 @@ svg {
 
 #rotate-message div {
   height: 200px;
+}
+
+.credit-block {
+  margin: 60px 0px
+}
+
+.credit-block h2 {
+  margin-bottom: 10px;
+}
+
+.credit-block h4 {
+  margin-bottom: 15px;
+}
+
+.cast-list h4 {
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+
+.welcome h1 {
+  margin-bottom: 30px;
+}
+
+.welcome p {
+  margin: 15px 0px;
 }

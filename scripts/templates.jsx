@@ -24,8 +24,157 @@ var WelcomeScreen = React.createClass({
 var EndScreen = React.createClass({
   render: function() {
     return(
-      <div className="container welcome centered-text">
-        <h1 className="absolute-center">Two Strangers</h1>
+      <div className="container credits centered-text">
+        <h1>Two Strangers</h1>
+
+        <div className="credit-block">
+          <h4>Written and Directed By</h4>
+          <h2>Máté Bede-Fazekas</h2>
+          <h2>Nolan Funk</h2>
+        </div>
+
+        <div className="credit-block">
+          <h4>Producer</h4>
+          <h2>Julia Saubier</h2>
+        </div>
+
+        <div className="credit-block">
+          <h4>Executive Producers</h4>
+          <h2>Alon Benari</h2>
+          <h2>Szilvia Viczián</h2>
+        </div>
+
+
+        <div className="credit-block cast-list">
+          <h1>Cast</h1>
+
+          <h4>Allison</h4>
+          <h2>Allison Brown</h2>
+
+          <h4>William</h4>
+          <h2>Máté Bede-Fazekas</h2>
+
+          <h4>Boyfriend</h4>
+          <h2>Yannick Trapman-O'brien</h2>
+
+          <h4>Wife</h4>
+          <h2>Megan Vincent</h2>
+
+          <h4>Mistress</h4>
+          <h2>Julia Sauiber</h2>
+
+          <h4>Concierge</h4>
+          <h2>Shivram Giri</h2>
+        </div>
+
+        <div className="credit-block">
+          <h4>Director of Photography</h4>
+          <h2>Matthew Mendelson</h2>
+        </div>
+
+        <div className="credit-block">
+          <h4>Production Design</h4>
+          <h2>Adam Pivirotto</h2>
+        </div>
+
+        <div className="credit-block">
+          <h4>Edited by</h4>
+          <h2>Máté Bede-Fazekas</h2>
+          <h2>Nolan Funk</h2>
+        </div>
+
+        <div className="credit-block">
+          <h4>Associate Producer</h4>
+          <h2>Adam Pivirotto</h2>
+        </div>
+
+        <div className="credit-block">
+          <h4>Costume and make­up</h4>
+          <h2>Adam Pivirotto</h2>
+          <h2>Megan Vincent</h2>
+        </div>
+
+        <div className="credit-block">
+          <h4>Unit Production Manager</h4>
+          <h2>Yi Yi Yeap</h2>
+        </div>
+
+        <div className="credit-block">
+          <h4>Line Producer</h4>
+          <h2>Chani Gatto</h2>
+        </div>
+
+        <div className="credit-block">
+          <h4>Assistant Director</h4>
+          <h2>Amani Alsaied</h2>
+        </div>
+
+        <div className="credit-block">
+          <h4>Gaffer/Key grip</h4>
+          <h2>David Woolner</h2>
+        </div>
+
+        <div className="credit-block">
+          <h4>Assistant Camera</h4>
+          <h2>Jess Dela Merced</h2>
+        </div>
+
+        <div className="credit-block">
+          <h4>Sound Mixer</h4>
+          <h2>Ashley Hoban</h2>
+        </div>
+
+        <div className="credit-block">
+          <h4>Programmer</h4>
+          <h2>Lingliang Zhang</h2>
+        </div>
+
+        <div className="credit-block">
+          <h4>Production Assistants</h4>
+          <h2>Robson Beaudry</h2>
+          <h2>Joi Lee</h2>
+          <h2>Cain Mathis</h2>
+          <h2>Attilio Rigotti</h2>
+          <h2>Laura Waltje</h2>
+        </div>
+
+        <div className="credit-block">
+          <h4>Production Assistants</h4>
+          <h2>Hilah Almog</h2>
+          <h2>Alana Barraj</h2>
+          <h2>Eric Baukhages</h2>
+          <h2>Laura Cazeaux</h2>
+          <h2>Douglas Choi</h2>
+          <h2>Scandar Copti</h2>
+          <h2>Scott Fitzgerald</h2>
+          <h2>Alexis Gambis</h2>
+          <h2>Dale Hudson</h2>
+          <h2>Seung­Hoon Jeong</h2>
+          <h2>Amos Ezra Katz</h2>
+          <h2>Nikolai Kozak</h2>
+          <h2>Joi Lee</h2>
+          <h2>Richard Lennon</h2>
+          <h2>Debra Levine</h2>
+          <h2>Oscar Lozano</h2>
+          <h2>Laila Rihawi</h2>
+          <h2>Lihu Roter</h2>
+          <h2>Jennifer Roth</h2>
+          <h2>Lamar Sanders</h2>
+          <h2>Jim Savio</h2>
+          <h2>Joanne Savio</h2>
+          <h2>Gail Segal</h2>
+          <h2>Omar Shoukri</h2>
+          <h2>Sandi Sissel</h2>
+        </div>
+
+        <div className="credit-block">
+          <h4>Supported by</h4>
+          <h2>INTERLUDE STUDIOS</h2>
+          <h2>EASTERN MANGROVES HOTEL &amp; SPA</h2>
+          <h2>ST. REGIS ABU DHABI</h2>
+          <h2>NEW YORK UNIVERSITY ABU DHABI</h2>
+        </div>
+
       </div>
     );
   }
