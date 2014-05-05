@@ -1,0 +1,917 @@
+<project uid="0a4d8e70-9bce-11e3-bb8c-6db668a11d4f" version="2.5">
+	<settings allowSeek="true" autoPlay="false" bufferSeconds="7" fps="25" originalHeight="480" originalWidth="854" smartBufferEnabled="false" startButtonFade="0.3" uid="5fcb7e50-cb0a-11e3-9505-b56ae4d59878" useVideoAcceleration="false" videoSmoothing="true">
+		<variable name="projectID" uid="0a479b00-9bce-11e3-bb8c-6db668a11d4f" />
+		<variable name="seekShowGUI" uid="0a479b01-9bce-11e3-bb8c-6db668a11d4f" value="true" />
+		<variable name="isHD" uid="0a47c210-9bce-11e3-bb8c-6db668a11d4f" value="true" />
+		<group groupName="contextMenu">
+			<contextMenuItem label="Created with Treehouse">
+				<action evt="click" type="open_url">
+					<arg name="url" value="http://interlude.fm/treehouse" />
+					<arg name="target" value="_blank" />
+					<arg name="reportName" value="treehouse_from_rightClickMenu" />
+				</action>
+			</contextMenuItem>
+			<contextMenuItem label="Powered by Interlude">
+				<action evt="click" type="open_url">
+					<arg name="url" value="http://www.interlude.fm" />
+					<arg name="target" value="_blank" />
+					<arg name="reportName" value="interlude_from_rightClickMenu" />
+				</action>
+			</contextMenuItem>
+		</group>
+		<mixPanelAccount code="0025d9afcf0ce2a2aaa27c0cfbe7b753" />
+		<interludeTrackerAccount code="track.interlude.fm" />
+		<variable name="voteLeaderNode" value="" />
+		<variable name="playerID" value="" />
+	</settings>
+	<assets>
+		<file id="asset_c145" source="http://cdn1.interlude.fm/1c5f7492-b0ee-4228-bd31-a13387332d97/36bb295ccafcf757994294b8d1c459ee.swf" uid="1c5f7492-b0ee-4228-bd31-a13387332d97" />
+		<file id="asset_c173" loadingPolicy="onInit" source="http://cdn1.interlude.fm/2e0d9f10-f90a-11e2-b01f-73ffeb49b7ce/a5930ec2d2791c373ae2405402ed0ef0.swf" uid="2e0d9f10-f90a-11e2-b01f-73ffeb49b7ce" />
+		<file id="asset_c383" source="http://cdn1.interlude.fm/a8ceeb60-5c32-11e3-949a-0800200c9a66/8ca8742dad09ad49871b1debb02f69db/v2/end_screen_restart_button.swf" uid="a8ceeb60-5c32-11e3-949a-0800200c9a66" />
+		<file id="asset_c409" source="http://cdn1.interlude.fm/ae4f7550-5c32-11e3-949a-0800200c9a66/e7a5973c16e8068c682fc3f3a396d7ab/v2/end_screen_facebook_button.swf" uid="ae4f7550-5c32-11e3-949a-0800200c9a66" />
+		<file id="asset_c461" source="http://cdn1.interlude.fm/b8ac0bd0-5c32-11e3-949a-0800200c9a66/a1763ff156e797b5a084b9966d900fea/v2/end_screen_twitter_button.swf" uid="b8ac0bd0-5c32-11e3-949a-0800200c9a66" />
+		<file id="asset_c474" loadingPolicy="onInit" source="http://cdn1.interlude.fm/c01b1f50-5c32-11e3-949a-0800200c9a66/650def50f57ff21b458ccf6760a9b73e/v2/start_screen_preloader.swf" uid="c01b1f50-5c32-11e3-949a-0800200c9a66" />
+		<file id="asset_c539" source="http://cdn1.interlude.fm/c5ab1560-ee0f-11e2-a2fd-411ce006ea6b/db9e6ce2a898bd7474580b52356f4248/clockTimer.swf" uid="c5ab1560-ee0f-11e2-a2fd-411ce006ea6b" />
+		<file id="asset_c591" loadingPolicy="onInit" source="http://cdn1.interlude.fm/cb484c40-5c32-11e3-949a-0800200c9a66/31cfe5e893bb3b76e3a86c35ec4fe7d4/v2/start_screen_start_button.swf" uid="cb484c40-5c32-11e3-949a-0800200c9a66" />
+		<file id="asset_c604" source="http://cdn1.interlude.fm/cb8a3de3-1821-404f-a0c7-458fbd2d4e66/ceecbbfd07b319e554233e0091564566/startscreen.swf" uid="cb8a3de3-1821-404f-a0c7-458fbd2d4e66" />
+		<file id="asset_c634" source="http://cdn1.interlude.fm/d3914500-5c32-11e3-949a-0800200c9a66/e5089785c5548bd4ee7f6aa60e52d756.swf" uid="d3914500-5c32-11e3-949a-0800200c9a66" />
+		<file id="asset_c662" source="http://cdn1.interlude.fm/de091730-34cb-11e3-8544-c177c084be29/8d75edd964d5acd9c01efb3f85153dee/watermark.swf" uid="de091730-34cb-11e3-8544-c177c084be29" />
+		<file id="audio_ding_sound_c355" source="http://cdn1.interlude.fm/a1c967b1-fd14-11e2-bc67-d5814f8204da/47de6a24b75781f2324e26b356e85063/ding.mp3" uid="a1c967b1-fd14-11e2-bc67-d5814f8204da" />
+	</assets>
+	<playlist>
+		<group groupName="VIDEO SEGMENTS">
+			<videoSegment duration="25280" id="video_0_dolly_c1390" source="http://cdn1.interlude.fm/f01284a0-cb04-11e3-8efb-61acc3aa54b3/5357ead0ed1847ac9ca75aff0aa4068e.flv" />
+			<videoSegment duration="149360" id="video_1_1_1_william_ring_ring_c1455" source="http://cdn1.interlude.fm/648f9610-cb0a-11e3-9505-b56ae4d59878/5357f3f8c0144414a12f5cb10aa4068e.flv" />
+			<videoSegment duration="68530" id="video_1_1_2_william_ring_no_ring_c1470" source="http://cdn1.interlude.fm/649366a0-cb0a-11e3-9505-b56ae4d59878/5357f3f8aefc4572b5035cb10aa4068e.flv" />
+			<videoSegment duration="112530" id="video_1_1_william_ring_c1485" source="http://cdn1.interlude.fm/64969af0-cb0a-11e3-9505-b56ae4d59878/5357f3f92b084f529cde5ca00aa4068e.flv" />
+			<videoSegment duration="82250" id="video_1_2_1_william_no_ring_drink_c1500" source="http://cdn1.interlude.fm/649a4470-cb0a-11e3-9505-b56ae4d59878/5357f3f920d84d3bb7785ca00aa4068e.flv" />
+			<videoSegment duration="99850" id="video_1_2_2_william_no_ring_hand_c1515" source="http://cdn1.interlude.fm/649d9fd0-cb0a-11e3-9505-b56ae4d59878/5357f3f93d104e53b08c5ca00aa4068e.flv" />
+			<videoSegment duration="114360" id="video_1_2_william_no_ring_c1530" source="http://cdn1.interlude.fm/64a12240-cb0a-11e3-9505-b56ae4d59878/5357f3fa8e0846358ef85ca00aa4068e.flv" />
+			<videoSegment duration="116910" id="video_1_william_c1545" source="http://cdn1.interlude.fm/64a47da0-cb0a-11e3-9505-b56ae4d59878/5357f3fa674040c988085ca00aa4068e.flv" />
+			<videoSegment duration="63610" id="video_2_1_1_allison_boyfriend_boyfriend_c1560" source="http://cdn1.interlude.fm/64a84e30-cb0a-11e3-9505-b56ae4d59878/5357f3fab17843f2ad025ca00aa4068e.flv" />
+			<videoSegment duration="140180" id="video_2_1_2_allison_bf_will_c1575" source="http://cdn1.interlude.fm/64abd0a0-cb0a-11e3-9505-b56ae4d59878/5357f3fa1c0849e798ea5ca00aa4068e.flv" />
+			<videoSegment duration="92590" id="video_2_1_allison_boyfriend_c1590" source="http://cdn1.interlude.fm/64af5310-cb0a-11e3-9505-b56ae4d59878/5357f3fa3fec416bb6995ca00aa4068e.flv" />
+			<videoSegment duration="40540" id="video_2_2_1_allison_no_boyfr#5205_c1605" source="http://cdn1.interlude.fm/64b2fc90-cb0a-11e3-9505-b56ae4d59878/5357f3fac5cc453a979c5ca00aa4068e.flv" />
+			<videoSegment duration="81160" id="video_2_2_2_allison_no_boyfriend_leave_c1620" source="http://cdn1.interlude.fm/64b6cd20-cb0a-11e3-9505-b56ae4d59878/5357f3fa561c4c8d9ab25ca00aa4068e.flv" />
+			<videoSegment duration="194570" id="video_2_2_allison_no_boyfriend_c1635" source="http://cdn1.interlude.fm/64baebd0-cb0a-11e3-9505-b56ae4d59878/5357f3fabbfc44cf97855ca00aa4068e.flv" />
+			<videoSegment duration="109190" id="video_2_allison_c1650" source="http://cdn1.interlude.fm/64bebc60-cb0a-11e3-9505-b56ae4d59878/5357f3fa01944b0abff05ca00aa4068e.flv" />
+		</group>
+		<group groupName="TREE STRUCTURE">
+			<node builderX="268" builderY="-23.2" id="node_beginning_c761" isHead="true" name="Beginning" segment="video_0_dolly_c1390" uid="0a5333c6-9bce-11e3-bb8c-6db668a11d4f">
+				<decision alwaysAppear="true" gui="beginning_container_c1040" guiAppearTime="17430">
+					<child target="node_william_c783" uid="0f540660-9bce-11e3-bb8c-6db668a11d4f">
+						<decisionButton id="william_button_c1050" isAutoStateUpdate="true" />
+					</child>
+					<child target="node_allison_c790" uid="0f5b8070-9bce-11e3-bb8c-6db668a11d4f">
+						<decisionButton id="allison_button_c1064" isAutoStateUpdate="true" />
+					</child>
+				</decision>
+				<cuePoint time="17430" type="launchJS">
+					<arg name="expression" value="interlude.trigger('playback.vote.start', 'node_beginning_c761', 'false', '{playerAPI.variables.playerID}');" />
+				</cuePoint>
+				<cuePoint time="24280" type="launchJS">
+					<arg name="expression" value="interlude.trigger('playback.vote.end', 'node_beginning_c761', '{playerAPI.variables.playerID}');" />
+				</cuePoint>
+				<cuePoint time="23780" type="node_select">
+					<arg name="node" value="{playerAPI.variables.voteLeaderNode}" />
+				</cuePoint>
+			</node>
+			<node builderX="493" builderY="-214.6" id="node_william_c783" name="William" segment="video_1_william_c1545" uid="0f527fc0-9bce-11e3-bb8c-6db668a11d4f">
+				<decision alwaysAppear="true" gui="william_container_c1154" guiAppearTime="109060">
+					<child target="node_ring_c825" uid="67bf85e0-9bce-11e3-bb8c-6db668a11d4f">
+						<decisionButton id="ring_button_c1164" isAutoStateUpdate="true" />
+					</child>
+					<child target="node_no_ring_c832" uid="68b53081-9bce-11e3-bb8c-6db668a11d4f">
+						<decisionButton id="no_ring_button_c1178" isAutoStateUpdate="true" />
+					</child>
+				</decision>
+				<cuePoint time="109060" type="launchJS">
+					<arg name="expression" value="interlude.trigger('playback.vote.start', 'node_william_c783', 'false', '{playerAPI.variables.playerID}');" />
+				</cuePoint>
+				<cuePoint time="115910" type="launchJS">
+					<arg name="expression" value="interlude.trigger('playback.vote.end', 'node_william_c783', '{playerAPI.variables.playerID}');" />
+				</cuePoint>
+				<cuePoint time="115410" type="node_select">
+					<arg name="node" value="{playerAPI.variables.voteLeaderNode}" />
+				</cuePoint>
+			</node>
+			<node builderX="493" builderY="126.15" id="node_allison_c790" name="Allison" segment="video_2_allison_c1650" uid="0f539130-9bce-11e3-bb8c-6db668a11d4f">
+				<decision alwaysAppear="true" gui="allison_container_c1192" guiAppearTime="101340">
+					<child target="node_boyfriend_c839" uid="69ad4c21-9bce-11e3-bb8c-6db668a11d4f">
+						<decisionButton id="boyfriend_button_c1202" isAutoStateUpdate="true" />
+					</child>
+					<child target="node_no_boyfriend_c846" uid="6a6662f1-9bce-11e3-bb8c-6db668a11d4f">
+						<decisionButton id="no_boyfriend_button_c1216" isAutoStateUpdate="true" />
+					</child>
+				</decision>
+				<cuePoint time="101340" type="launchJS">
+					<arg name="expression" value="interlude.trigger('playback.vote.start', 'node_allison_c790', 'false', '{playerAPI.variables.playerID}');" />
+				</cuePoint>
+				<cuePoint time="108190" type="launchJS">
+					<arg name="expression" value="interlude.trigger('playback.vote.end', 'node_allison_c790', '{playerAPI.variables.playerID}');" />
+				</cuePoint>
+				<cuePoint time="107690" type="node_select">
+					<arg name="node" value="{playerAPI.variables.voteLeaderNode}" />
+				</cuePoint>
+			</node>
+			<node builderX="943" builderY="46.4" id="node_boyfriend_c797" name="Boyfriend" segment="video_2_1_1_allison_boyfriend_boyfriend_c1560" uid="12fd42d0-9bcf-11e3-bb8c-6db668a11d4f" />
+			<node builderX="943" builderY="134.85" id="node_william_c804" name="William" segment="video_2_1_2_allison_bf_will_c1575" uid="13c01da0-9bcf-11e3-bb8c-6db668a11d4f" />
+			<node builderX="943" builderY="216" id="node_stay_c818" name="Stay" segment="video_2_2_1_allison_no_boyfr#5205_c1605" uid="3c41af00-9bcf-11e3-bb8c-6db668a11d4f" />
+			<node builderX="718" builderY="-350.89" id="node_ring_c825" name="Ring" segment="video_1_1_william_ring_c1485" uid="67bf5ed0-9bce-11e3-bb8c-6db668a11d4f">
+				<decision alwaysAppear="true" gui="ring_container_c1230" guiAppearTime="104680">
+					<child target="node_ring_c853" uid="8f87b251-9bce-11e3-bb8c-6db668a11d4f">
+						<decisionButton id="ring_button_c1240" isAutoStateUpdate="true" />
+					</child>
+					<child target="node_no_ring_c860" uid="8fe20751-9bce-11e3-bb8c-6db668a11d4f">
+						<decisionButton id="no_ring_button_c1254" isAutoStateUpdate="true" />
+					</child>
+				</decision>
+				<cuePoint time="104680" type="launchJS">
+					<arg name="expression" value="interlude.trigger('playback.vote.start', 'node_ring_c825', 'false', '{playerAPI.variables.playerID}');" />
+				</cuePoint>
+				<cuePoint time="111530" type="launchJS">
+					<arg name="expression" value="interlude.trigger('playback.vote.end', 'node_ring_c825', '{playerAPI.variables.playerID}');" />
+				</cuePoint>
+				<cuePoint time="111030" type="node_select">
+					<arg name="node" value="{playerAPI.variables.voteLeaderNode}" />
+				</cuePoint>
+			</node>
+			<node builderX="718" builderY="-145" id="node_no_ring_c832" name="No Ring" segment="video_1_2_william_no_ring_c1530" uid="68b53080-9bce-11e3-bb8c-6db668a11d4f">
+				<decision alwaysAppear="true" gui="no_ring_container_c1268" guiAppearTime="106510">
+					<child target="node_drink_c867" uid="e9f395b1-9bce-11e3-bb8c-6db668a11d4f">
+						<decisionButton id="drink_button_c1278" isAutoStateUpdate="true" />
+					</child>
+					<child target="node_hand_c874" uid="edce85f1-9bce-11e3-bb8c-6db668a11d4f">
+						<decisionButton id="hand_button_c1292" isAutoStateUpdate="true" />
+					</child>
+				</decision>
+				<cuePoint time="106510" type="launchJS">
+					<arg name="expression" value="interlude.trigger('playback.vote.start', 'node_no_ring_c832', 'false', '{playerAPI.variables.playerID}');" />
+				</cuePoint>
+				<cuePoint time="113360" type="launchJS">
+					<arg name="expression" value="interlude.trigger('playback.vote.end', 'node_no_ring_c832', '{playerAPI.variables.playerID}');" />
+				</cuePoint>
+				<cuePoint time="112860" type="node_select">
+					<arg name="node" value="{playerAPI.variables.voteLeaderNode}" />
+				</cuePoint>
+			</node>
+			<node builderX="718" builderY="85.55" id="node_boyfriend_c839" name="Boyfriend" segment="video_2_1_allison_boyfriend_c1590" uid="69ad4c20-9bce-11e3-bb8c-6db668a11d4f">
+				<decision alwaysAppear="true" gui="boyfriend_container_c1078" guiAppearTime="84740">
+					<child target="node_boyfriend_c797" uid="12fd42d1-9bcf-11e3-bb8c-6db668a11d4f">
+						<decisionButton id="boyfriend_button_c1088" isAutoStateUpdate="true" />
+					</child>
+					<child target="node_william_c804" uid="13c01da1-9bcf-11e3-bb8c-6db668a11d4f">
+						<decisionButton id="william_button_c1102" isAutoStateUpdate="true" />
+					</child>
+				</decision>
+				<cuePoint time="84740" type="launchJS">
+					<arg name="expression" value="interlude.trigger('playback.vote.start', 'node_boyfriend_c839', 'false', '{playerAPI.variables.playerID}');" />
+				</cuePoint>
+				<cuePoint time="91590" type="launchJS">
+					<arg name="expression" value="interlude.trigger('playback.vote.end', 'node_boyfriend_c839', '{playerAPI.variables.playerID}');" />
+				</cuePoint>
+				<cuePoint time="91090" type="node_select">
+					<arg name="node" value="{playerAPI.variables.voteLeaderNode}" />
+				</cuePoint>
+			</node>
+			<node builderX="718" builderY="311.75" id="node_no_boyfriend_c846" name="No Boyfriend" segment="video_2_2_allison_no_boyfriend_c1635" uid="6a6662f0-9bce-11e3-bb8c-6db668a11d4f">
+				<decision alwaysAppear="true" gui="no_boyfriend_container_c1116" guiAppearTime="186720">
+					<child target="node_stay_c818" uid="3c41af01-9bcf-11e3-bb8c-6db668a11d4f">
+						<decisionButton id="stay_button_c1140" isAutoStateUpdate="true" />
+					</child>
+					<child target="node_leave_c3285" uid="730097d0-cb14-11e3-9505-b56ae4d59878">
+						<decisionButton id="leave_button_c3301" isAutoStateUpdate="true" />
+					</child>
+				</decision>
+				<cuePoint time="186720" type="launchJS">
+					<arg name="expression" value="interlude.trigger('playback.vote.start', 'node_no_boyfriend_c846', 'false', '{playerAPI.variables.playerID}');" />
+				</cuePoint>
+				<cuePoint time="193570" type="launchJS">
+					<arg name="expression" value="interlude.trigger('playback.vote.end', 'node_no_boyfriend_c846', '{playerAPI.variables.playerID}');" />
+				</cuePoint>
+				<cuePoint time="193070" type="node_select">
+					<arg name="node" value="{playerAPI.variables.voteLeaderNode}" />
+				</cuePoint>
+			</node>
+			<node builderX="943" builderY="-510.39" id="node_ring_c853" name="Ring" segment="video_1_1_1_william_ring_ring_c1455" uid="8f87b250-9bce-11e3-bb8c-6db668a11d4f" />
+			<node builderX="943" builderY="-430.64" id="node_no_ring_c860" name="No Ring" segment="video_1_1_2_william_ring_no_ring_c1470" uid="8fe20750-9bce-11e3-bb8c-6db668a11d4f" />
+			<node builderX="943" builderY="-213.14" id="node_drink_c867" name="Drink" segment="video_1_2_1_william_no_ring_drink_c1500" uid="e9f395b0-9bce-11e3-bb8c-6db668a11d4f" />
+			<node builderX="943" builderY="-101.5" id="node_hand_c874" name="Hand" segment="video_1_2_2_william_no_ring_hand_c1515" uid="edce85f0-9bce-11e3-bb8c-6db668a11d4f" />
+			<node builderX="943" builderY="361" id="node_leave_c3285" name="Leave" segment="video_2_2_2_allison_no_boyfriend_leave_c1620" uid="72facb70-cb14-11e3-9505-b56ae4d59878" />
+		</group>
+	</playlist>
+	<gui uid="0a4d8e70-9bce-11e3-bb8c-6db668a11d4f">
+		<container fadeInDuration="0.5" fadeOutDuration="0.5" id="beginning_container_c1040" type="decisionGui" userSelectionDisappearDelay="1">
+			<timer fadeDuration="0.2" height="95" id="beginning_timer_c1046" mouseEnabled="false" position="{playerAPI.normalizedSelectionTimeLeft}" position2="{playerAPI.normalizedSelectionToNodeEndTime}" response="0.20000000298023" skinClass="timerToChoose" skinParameter="white" skinSource="asset_c539" text="{playerAPI.numericSelectionTimeLeft}" uid="0f55db20-9bce-11e3-bb8c-6db668a11d4f" width="95" x="765" y="79">
+				<action evt="nodeSelectedActive" type="set_property">
+					<arg value="this.showLabel" />
+					<arg value="false" />
+				</action>
+				<action evt="nodeSelectedActive" type="set_property">
+					<arg value="this.showTimer1" />
+					<arg value="false" />
+				</action>
+			</timer>
+			<button height="71" id="william_button_c1050" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="William" uid="0f57d6f0-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="128" x="298" y="313">
+				<action delay="0" evt="click" keyCode="0" type="node_select">
+					<arg name="node" value="node_william_c783" />
+				</action>
+				<action evt="click" type="play_audio">
+					<arg value="audio_ding_sound_c355" />
+				</action>
+			</button>
+			<button height="71" id="allison_button_c1064" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Allison" uid="0f5bf5a0-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="118" x="430" y="313">
+				<action delay="0" evt="click" keyCode="0" type="node_select">
+					<arg name="node" value="node_allison_c790" />
+				</action>
+				<action evt="click" type="play_audio">
+					<arg value="audio_ding_sound_c355" />
+				</action>
+			</button>
+		</container>
+		<container bottom="0" fadeOutDuration="0.5" id="start_screen_container_c948" left="0" right="0" top="0" type="startScreen">
+			<shape bottom="0" left="0" right="0" top="0" type="rect">
+				<fill color="0x131B27" type="solid" />
+			</shape>
+			<container id="start_screen_container_c955" scaleMode="maintain_ratio" type="letterBox">
+				<container bottom="0" id="start_screen_container_c961" left="0" right="0" top="0" type="background" />
+				<button height="130" id="start_screen_button_c967" skinClass="start" skinSource="asset_c591" text="Start" uid="0a530cb2-9bce-11e3-bb8c-6db668a11d4f" visible="false" width="130" x="358" y="175">
+					<action delay="0" evt="click" keyCode="0" type="start_video" />
+				</button>
+				<progressBar height="40" id="start_screen_progress_bar_c976" position="0" skinClass="loading" skinSource="asset_c474" uid="0a530cb3-9bce-11e3-bb8c-6db668a11d4f" width="36" x="423" y="240" />
+			</container>
+		</container>
+		<container bottom="0" fadeInDuration="1" fadeOutDuration="0.8" id="end_screen_container_c980" left="0" right="0" top="0" type="endScreen">
+			<shape bottom="0" left="0" right="0" top="0" type="rect">
+				<fill color="0x131B27" type="solid" />
+			</shape>
+			<container id="end_screen_container_c986" scaleMode="maintain_ratio" type="letterBox">
+				<container bottom="0" id="end_screen_container_c992" left="0" right="0" top="0" type="background" />
+				<button height="130" id="end_screen_button_c998" skinClass="restart" skinSource="asset_c383" text="Create New Version" uid="0a5333c3-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="130" x="220" y="175">
+					<action delay="0" evt="click" keyCode="0" type="create_new_version">
+						<arg name="nodeToStart" value="node_beginning_c761" />
+					</action>
+				</button>
+				<button height="130" id="end_screen_button_c1008" skinClass="shareF" skinSource="asset_c409" text="Share on Facebook" uid="0a5333c4-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="130" x="349" y="175">
+					<action delay="0" evt="click" keyCode="0" type="share">
+						<arg name="method" value="facebook" />
+						<arg name="url" value="http://in.fm/v/Vk4RZM" />
+						<arg name="target" value="_blank" />
+						<arg name="status" value="Talk To Strangers Rough Cut @InterludeVideo" />
+					</action>
+				</button>
+				<button height="130" id="end_screen_button_c1024" skinClass="shareT" skinSource="asset_c461" text="Share on Twitter" uid="0a5333c5-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="130" x="478" y="175">
+					<action delay="0" evt="click" keyCode="0" type="share">
+						<arg name="method" value="twitter" />
+						<arg name="url" value="http://in.fm/v/Vk4RZM" />
+						<arg name="target" value="_blank" />
+						<arg name="status" value="Talk To Strangers Rough Cut @InterludeVideo" />
+					</action>
+				</button>
+			</container>
+		</container>
+		<container fadeInDuration="0.5" fadeOutDuration="0.5" id="william_container_c1154" type="decisionGui" userSelectionDisappearDelay="1">
+			<timer fadeDuration="0.2" height="95" id="william_timer_c1160" mouseEnabled="false" position="{playerAPI.normalizedSelectionTimeLeft}" position2="{playerAPI.normalizedSelectionToNodeEndTime}" response="0.20000000298023" skinClass="timerToChoose" skinParameter="white" skinSource="asset_c539" text="{playerAPI.numericSelectionTimeLeft}" uid="67c74e10-9bce-11e3-bb8c-6db668a11d4f" width="95" x="765" y="79">
+				<action evt="nodeSelectedActive" type="set_property">
+					<arg value="this.showLabel" />
+					<arg value="false" />
+				</action>
+				<action evt="nodeSelectedActive" type="set_property">
+					<arg value="this.showTimer1" />
+					<arg value="false" />
+				</action>
+			</timer>
+			<button height="71" id="no_ring_button_c1178" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="No Ring" uid="68bc5c70-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="138" x="305" y="313">
+				<action delay="0" evt="click" keyCode="0" type="node_select">
+					<arg name="node" value="node_no_ring_c832" />
+				</action>
+				<action evt="click" type="play_audio">
+					<arg value="audio_ding_sound_c355" />
+				</action>
+			</button>
+			<button height="71" id="ring_button_c1164" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Ring" uid="67c9bf10-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="95" x="447" y="313">
+				<action delay="0" evt="click" keyCode="0" type="node_select">
+					<arg name="node" value="node_ring_c825" />
+				</action>
+				<action evt="click" type="play_audio">
+					<arg value="audio_ding_sound_c355" />
+				</action>
+			</button>
+		</container>
+		<container fadeInDuration="0.5" fadeOutDuration="0.5" id="allison_container_c1192" type="decisionGui" userSelectionDisappearDelay="1">
+			<timer fadeDuration="0.2" height="95" id="allison_timer_c1198" mouseEnabled="false" position="{playerAPI.normalizedSelectionTimeLeft}" position2="{playerAPI.normalizedSelectionToNodeEndTime}" response="0.20000000298023" skinClass="timerToChoose" skinParameter="white" skinSource="asset_c539" text="{playerAPI.numericSelectionTimeLeft}" uid="69b2ca60-9bce-11e3-bb8c-6db668a11d4f" width="95" x="765" y="79">
+				<action evt="nodeSelectedActive" type="set_property">
+					<arg value="this.showLabel" />
+					<arg value="false" />
+				</action>
+				<action evt="nodeSelectedActive" type="set_property">
+					<arg value="this.showTimer1" />
+					<arg value="false" />
+				</action>
+			</timer>
+			<button height="71" id="boyfriend_button_c1202" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Boyfriend" uid="69b47810-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="158" x="242" y="313">
+				<action delay="0" evt="click" keyCode="0" type="node_select">
+					<arg name="node" value="node_boyfriend_c839" />
+				</action>
+				<action evt="click" type="play_audio">
+					<arg value="audio_ding_sound_c355" />
+				</action>
+			</button>
+			<button height="71" id="no_boyfriend_button_c1216" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="No Boyfriend" uid="6a6b1de0-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="201" x="404" y="313">
+				<action delay="0" evt="click" keyCode="0" type="node_select">
+					<arg name="node" value="node_no_boyfriend_c846" />
+				</action>
+				<action evt="click" type="play_audio">
+					<arg value="audio_ding_sound_c355" />
+				</action>
+			</button>
+		</container>
+		<container fadeInDuration="0.5" fadeOutDuration="0.5" id="ring_container_c1230" type="decisionGui" userSelectionDisappearDelay="1">
+			<timer fadeDuration="0.2" height="95" id="ring_timer_c1236" mouseEnabled="false" position="{playerAPI.normalizedSelectionTimeLeft}" position2="{playerAPI.normalizedSelectionToNodeEndTime}" response="0.20000000298023" skinClass="timerToChoose" skinParameter="white" skinSource="asset_c539" text="{playerAPI.numericSelectionTimeLeft}" uid="8f8fa190-9bce-11e3-bb8c-6db668a11d4f" width="95" x="765" y="79">
+				<action evt="nodeSelectedActive" type="set_property">
+					<arg value="this.showLabel" />
+					<arg value="false" />
+				</action>
+				<action evt="nodeSelectedActive" type="set_property">
+					<arg value="this.showTimer1" />
+					<arg value="false" />
+				</action>
+			</timer>
+			<button height="71" id="no_ring_button_c1254" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="No Ring" uid="8fe95a50-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="138" x="305" y="313">
+				<action delay="0" evt="click" keyCode="0" type="node_select">
+					<arg name="node" value="node_no_ring_c860" />
+				</action>
+				<action evt="click" type="play_audio">
+					<arg value="audio_ding_sound_c355" />
+				</action>
+			</button>
+			<button height="71" id="ring_button_c1240" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Ring" uid="8f912830-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="95" x="447" y="313">
+				<action delay="0" evt="click" keyCode="0" type="node_select">
+					<arg name="node" value="node_ring_c853" />
+				</action>
+				<action evt="click" type="play_audio">
+					<arg value="audio_ding_sound_c355" />
+				</action>
+			</button>
+		</container>
+		<container fadeInDuration="0.5" fadeOutDuration="0.5" id="no_ring_container_c1268" type="decisionGui" userSelectionDisappearDelay="1">
+			<timer fadeDuration="0.2" height="95" id="no_ring_timer_c1274" mouseEnabled="false" position="{playerAPI.normalizedSelectionTimeLeft}" position2="{playerAPI.normalizedSelectionToNodeEndTime}" response="0.20000000298023" skinClass="timerToChoose" skinParameter="white" skinSource="asset_c539" text="{playerAPI.numericSelectionTimeLeft}" uid="ea0066f0-9bce-11e3-bb8c-6db668a11d4f" width="95" x="765" y="79">
+				<action evt="nodeSelectedActive" type="set_property">
+					<arg value="this.showLabel" />
+					<arg value="false" />
+				</action>
+				<action evt="nodeSelectedActive" type="set_property">
+					<arg value="this.showTimer1" />
+					<arg value="false" />
+				</action>
+			</timer>
+			<button height="71" id="hand_button_c1292" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Hand" uid="edd9a980-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="110" x="316" y="313">
+				<action delay="0" evt="click" keyCode="0" type="node_select">
+					<arg name="node" value="node_hand_c874" />
+				</action>
+				<action evt="click" type="play_audio">
+					<arg value="audio_ding_sound_c355" />
+				</action>
+			</button>
+			<button height="71" id="drink_button_c1278" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Drink" uid="ea023bb0-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="102" x="429" y="313">
+				<action delay="0" evt="click" keyCode="0" type="node_select">
+					<arg name="node" value="node_drink_c867" />
+				</action>
+				<action evt="click" type="play_audio">
+					<arg value="audio_ding_sound_c355" />
+				</action>
+			</button>
+		</container>
+		<container fadeInDuration="0.5" fadeOutDuration="0.5" id="boyfriend_container_c1078" type="decisionGui" userSelectionDisappearDelay="1">
+			<timer fadeDuration="0.2" height="95" id="boyfriend_timer_c1084" mouseEnabled="false" position="{playerAPI.normalizedSelectionTimeLeft}" position2="{playerAPI.normalizedSelectionToNodeEndTime}" response="0.20000000298023" skinClass="timerToChoose" skinParameter="white" skinSource="asset_c539" text="{playerAPI.numericSelectionTimeLeft}" uid="130ab050-9bcf-11e3-bb8c-6db668a11d4f" width="95" x="765" y="79">
+				<action evt="nodeSelectedActive" type="set_property">
+					<arg value="this.showLabel" />
+					<arg value="false" />
+				</action>
+				<action evt="nodeSelectedActive" type="set_property">
+					<arg value="this.showTimer1" />
+					<arg value="false" />
+				</action>
+			</timer>
+			<button height="71" id="william_button_c1102" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="William" uid="13cca0c0-9bcf-11e3-bb8c-6db668a11d4f" visible="true" width="128" x="278" y="313">
+				<action delay="0" evt="click" keyCode="0" type="node_select">
+					<arg name="node" value="node_william_c804" />
+				</action>
+				<action evt="click" type="play_audio">
+					<arg value="audio_ding_sound_c355" />
+				</action>
+			</button>
+			<button height="71" id="boyfriend_button_c1088" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Boyfriend" uid="130c36f0-9bcf-11e3-bb8c-6db668a11d4f" visible="true" width="158" x="410" y="313">
+				<action delay="0" evt="click" keyCode="0" type="node_select">
+					<arg name="node" value="node_boyfriend_c797" />
+				</action>
+				<action evt="click" type="play_audio">
+					<arg value="audio_ding_sound_c355" />
+				</action>
+			</button>
+		</container>
+		<container fadeInDuration="0.5" fadeOutDuration="0.5" id="no_boyfriend_container_c1116" type="decisionGui" userSelectionDisappearDelay="1">
+			<timer fadeDuration="0.2" height="95" id="no_boyfriend_timer_c1122" mouseEnabled="false" position="{playerAPI.normalizedSelectionTimeLeft}" position2="{playerAPI.normalizedSelectionToNodeEndTime}" response="0.20000000298023" skinClass="timerToChoose" skinParameter="white" skinSource="asset_c539" text="{playerAPI.numericSelectionTimeLeft}" uid="3b278c70-9bcf-11e3-bb8c-6db668a11d4f" width="95" x="765" y="79">
+				<action evt="nodeSelectedActive" type="set_property">
+					<arg value="this.showLabel" />
+					<arg value="false" />
+				</action>
+				<action evt="nodeSelectedActive" type="set_property">
+					<arg value="this.showTimer1" />
+					<arg value="false" />
+				</action>
+			</timer>
+			<button height="71" id="leave_button_c3301" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Leave" uid="72facb71-cb14-11e3-9505-b56ae4d59878" visible="true" width="118" x="315" y="313">
+				<action evt="click" type="node_select">
+					<arg name="node" value="node_leave_c3285" />
+				</action>
+				<action evt="click" type="play_audio">
+					<arg value="audio_ding_sound_c355" />
+				</action>
+			</button>
+			<button height="71" id="stay_button_c1140" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Stay" uid="3c518d80-9bcf-11e3-bb8c-6db668a11d4f" visible="true" width="94" x="437" y="313">
+				<action delay="0" evt="click" keyCode="0" type="node_select">
+					<arg name="node" value="node_stay_c818" />
+				</action>
+				<action evt="click" type="play_audio">
+					<arg value="audio_ding_sound_c355" />
+				</action>
+			</button>
+		</container>
+		<container bottom="0" id="playerMain" left="0" right="0" top="0" type="playerMain">
+			<shape bottom="0" buttonMode="false" left="0" right="0" top="0" type="rect">
+				<fill color="0x000000" type="solid" />
+			</shape>
+			<container height="480" id="letterBox" scaleMode="fit" type="letterBox" width="854">
+				<video btnMute="playerAPI.playerMain.transportBar.btnMute" height="480" id="screen" loadingBar="playerAPI.playerMain.startScreenOuter.start_screen_container_c948.start_screen_container_c955.start_screen_progress_bar_c976" startButton="playerAPI.playerMain.startScreenOuter.start_screen_container_c948.start_screen_container_c955.start_screen_button_c967" volume="1" volumeBar="playerAPI.playerMain.transportBar.volBar" width="854">
+					<action delay="4" evt="videoFirstStart" id="startMinimizeTransportBar" type="tween_to_state">
+						<arg name="stateName" value="minimized" />
+						<arg name="component" value="container.container.transportBar" />
+						<arg name="animationTime" value="1" />
+					</action>
+					<action delay="4" evt="videoFirstStart" id="startExpandMiniTransportBar" onComplete="done" type="tween_to_state">
+						<arg name="stateName" value="expanded" />
+						<arg name="component" value="container.container.miniTransportBar" />
+						<arg name="animationTime" value="1" />
+					</action>
+					<action evt="done" id="logoUp" type="tween_to_state">
+						<arg name="stateName" value="up" />
+						<arg name="component" value="playerAPI.playerMain.interludeLogo" />
+						<arg name="animationTime" value="0.5" />
+						<arg name="transitionType" value="easeOutCubic" />
+					</action>
+					<action evt="done" id="logoTwistRight" type="set_property">
+						<arg value="playerAPI.playerMain.interludeLogo.skinParameter" />
+						<arg value="rotateRight" />
+					</action>
+
+					<action delay="3.5" evt="nodeStartPassive" type="tween_to_state">
+						<arg name="stateName" value="hide" />
+						<arg name="component" value="playerAPI.playerMain.letterBox.createNewVersion" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+
+					<action delay="0.5" evt="videoEnded" type="tween_to_state">
+						<arg name="stateName" value="show" />
+						<arg name="component" value="playerAPI.playerMain.letterBox.createNewVersion" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<action delay="0.5" evt="videoEndedPassive" type="tween_to_state">
+						<arg name="stateName" value="show" />
+						<arg name="component" value="playerAPI.playerMain.letterBox.createNewVersion" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+
+					<action evt="videoEnded" type="tween_to_state">
+						<arg name="stateName" value="hide" />
+						<arg name="component" value="playerAPI.playerMain.transportBar.btnPlayPause" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<action delay="0.1" evt="videoEnded" type="tween_to_state">
+						<arg name="stateName" value="show" />
+						<arg name="component" value="playerAPI.playerMain.transportBar.btnNewVersion" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<action evt="videoCreateNew" type="tween_to_state">
+						<arg name="stateName" value="hide" />
+						<arg name="component" value="playerAPI.playerMain.transportBar.btnNewVersion" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<action delay="0.1" evt="videoCreateNew" type="tween_to_state">
+						<arg name="stateName" value="show" />
+						<arg name="component" value="playerAPI.playerMain.transportBar.btnPlayPause" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<action evt="videoFirstStart" type="tween_to_state">
+						<arg name="stateName" value="show" />
+						<arg name="component" value="playerAPI.playerMain.transportBar.btnPlayPause" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<action evt="videoFirstStart" type="tween_to_state">
+						<arg name="stateName" value="hide" />
+						<arg name="component" value="playerAPI.playerMain.transportBar.btnStartVideo" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<action evt="videoReplay" type="tween_to_state">
+						<arg name="stateName" value="show" />
+						<arg name="component" value="playerAPI.playerMain.transportBar.btnPlayPause" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<action evt="videoReplay" type="tween_to_state">
+						<arg name="stateName" value="hide" />
+						<arg name="component" value="playerAPI.playerMain.transportBar.btnNewVersion" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+
+					<action evt="videoCreateNew" type="tween_to_state">
+						<arg name="stateName" value="hide" />
+						<arg name="component" value="playerAPI.playerMain.transportBar.btnStopDisabled" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<action evt="videoCreateNew" type="tween_to_state">
+						<arg name="stateName" value="show" />
+						<arg name="component" value="playerAPI.playerMain.transportBar.btnStop" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<action evt="videoFirstStart" type="tween_to_state">
+						<arg name="stateName" value="show" />
+						<arg name="component" value="playerAPI.playerMain.transportBar.btnStop" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<action evt="videoFirstStart" type="tween_to_state">
+						<arg name="stateName" value="hide" />
+						<arg name="component" value="playerAPI.playerMain.transportBar.btnStopDisabled" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<action evt="videoEnded" type="tween_to_state">
+						<arg name="stateName" value="hide" />
+						<arg name="component" value="playerAPI.playerMain.transportBar.btnStop" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<action evt="videoEnded" type="tween_to_state">
+						<arg name="stateName" value="show" />
+						<arg name="component" value="playerAPI.playerMain.transportBar.btnStopDisabled" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<action evt="videoReplay" type="tween_to_state">
+						<arg name="stateName" value="show" />
+						<arg name="component" value="playerAPI.playerMain.transportBar.btnStop" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<action evt="videoReplay" type="tween_to_state">
+						<arg name="stateName" value="hide" />
+						<arg name="component" value="playerAPI.playerMain.transportBar.btnStopDisabled" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<action evt="videoEnded" type="launchJS">
+						<arg name="expression" value="interlude.trigger('playback.event', 'videoEnded', '{playerAPI.variables.playerID}');" />
+					</action>
+					<action evt="videoCreateNew" type="launchJS">
+						<arg name="expression" value="interlude.trigger('playback.event', 'videoCreateNew', '{playerAPI.variables.playerID}')" />
+					</action>
+				</video>
+				<container bottom="0" id="overlays" left="0" right="0" scaleMode="fit" top="0" />
+
+				<button excludeFromLayout="true" id="createNewVersion" left="0" skinClass="newVersion" skinSource="asset_c634" top="5" visible="{playerAPI.isPassive}">
+					<state left="-165" stateName="hide" />
+
+					<state left="0" stateName="show" />
+					<action evt="click" type="create_new_version" />
+				</button>
+			</container>
+
+			<container bottom="0" id="bufferingScreen" left="0" right="0" showIndependent="true" top="0" visible="{playerAPI.isBuffering}">
+				<shape bottom="0" buttonMode="false" left="0" right="0" top="0" type="rect">
+					<fill alpha="0.6" color="0x131b28" type="solid" />
+				</shape>
+				<progressBar centerX="0" centerY="0" id="animation" position="0" response="0.2" skinClass="loading" skinSource="asset_c604" />
+			</container>
+
+			<container alpha="1" bottom="0" id="resume" left="0" right="0" showIndependent="true" top="0" visible="{playerAPI.isPaused}">
+				<shape bottom="0" buttonMode="false" left="0" right="0" top="0" type="rect">
+					<fill alpha="0.6" color="0x131b28" type="solid" />
+					<action evt="click" type="play_video" />
+				</shape>
+				<button centerX="0" centerY="0" id="resumeButton" skinClass="resume" skinSource="asset_c634">
+					<action evt="click" type="play_video" />
+				</button>
+			</container>
+			<container bottom="0" fadeOutDuration="0.1" id="startScreenOuter" left="0" right="0" top="0" type="startScreenPH" />
+			<container bottom="0" id="endScreenOuter" left="0" right="0" top="0" type="endScreenPH" />
+			<container bottom="0" height="25" id="transportBar" left="0" right="0">
+				<action evt="mouseOver" type="cancel_delayed_actions">
+					<arg name="actionID" value="minimizeTransportbar" />
+					<arg name="actionID" value="expandMiniTransportbar" />
+					<arg name="actionID" value="startMinimizeTransportBar" />
+					<arg name="actionID" value="startExpandMiniTransportBar" />
+					<arg name="actionID" value="logoTwistRight" />
+					<arg name="actionID" value="logoUp" />
+				</action>
+				<action delay="0.3" evt="mouseOut" id="minimizeTransportbar" type="tween_to_state">
+					<arg name="stateName" value="minimized" />
+					<arg name="component" value="this" />
+					<arg name="animationTime" value="0.5" />
+				</action>
+				<action delay="0.3" evt="mouseOut" id="logoTwistRight" type="set_property">
+					<arg value="playerAPI.playerMain.interludeLogo.skinParameter" />
+					<arg value="rotateRight" />
+				</action>
+				<action delay="0.3" evt="mouseOut" id="logoUp" type="tween_to_state">
+					<arg name="stateName" value="up" />
+					<arg name="component" value="playerAPI.playerMain.interludeLogo" />
+					<arg name="animationTime" value="0.5" />
+					<arg name="transitionType" value="easeOutCubic" />
+				</action>
+				<action delay="0.3" evt="mouseOut" id="expandMiniTransportbar" type="tween_to_state">
+					<arg name="stateName" value="expanded" />
+					<arg name="component" value="container.miniTransportBar" />
+					<arg name="animationTime" value="0.5" />
+				</action>
+				<state bottom="-25" stateName="minimized" />
+				<state bottom="0" stateName="expanded" />
+				<shape bottom="0" left="0" right="0" top="0" type="rect">
+					<fill alpha="0.8" color="0x131B28" type="solid" />
+				</shape>
+				<button alpha="0" id="btnPlayPause" left="1" showIndependent="true" skinClass="playPause" skinSource="asset_c634" state="{playerAPI.playButtonState}" top="1" visible="false">
+					<state alpha="1" stateName="show" visible="1" />
+					<state alpha="0" stateName="hide" visible="0" />
+					<action evt="click" keyCode="32" type="togglePlay" />
+				</button>
+				<button alpha="1" id="btnStartVideo" left="1" showIndependent="true" skinClass="playPause" skinSource="asset_c634" top="1" visible="true">
+					<state alpha="1" stateName="show" visible="1" />
+					<state alpha="0" stateName="hide" visible="0" />
+					<action evt="click" keyCode="32" type="start_video" />
+				</button>
+				<button alpha="0" id="btnNewVersion" left="1" showIndependent="true" skinClass="newVersionSmall" skinSource="asset_c634" top="0" visible="false">
+					<state alpha="1" stateName="show" visible="1" />
+					<state alpha="0" stateName="hide" visible="0" />
+					<action evt="click" type="create_new_version" />
+				</button>
+				<button alpha="0.7" buttonMode="false" id="divider1" left="28" skinClass="divider" skinSource="asset_c634" top="3" />
+				<button alpha="0" id="btnStop" left="29" skinClass="stop" skinSource="asset_c634" top="1" visible="false">
+					<state alpha="1" stateName="show" visible="1" />
+					<state alpha="0" stateName="hide" visible="0" />
+					<action evt="click" type="stop_video">
+
+						<arg name="showEndScreen" value="true" />
+					</action>
+				</button>
+				<button alpha="1" buttonMode="false" id="btnStopDisabled" left="29" skinClass="stopDisabled" skinSource="asset_c634" top="1" visible="true">
+					<state alpha="1" stateName="show" visible="1" />
+					<state alpha="0" stateName="hide" visible="0" />
+				</button>
+				<button alpha="0.7" buttonMode="false" id="divider2" left="56" skinClass="divider" skinSource="asset_c634" top="3" />
+				<slider excludeFromLayout="true" id="volBar" left="59" mask="{container.volMask}" position="0.8" response="0.4" showToolTip="false" skinClass="volumeBar" skinSource="asset_c634" textFormat="" top="93">
+					<state stateName="volumeExpanded" top="23" />
+					<action evt="slide" type="set_volume">
+						<arg name="volume" value="{position}" />
+					</action>
+					<action evt="mouseOver" type="cancel_delayed_actions">
+						<arg name="actionID" value="expandSeek" />
+						<arg name="actionID" value="shrinkVolBar" />
+					</action>
+					<action delay="0.3" evt="mouseOut" id="shrinkVolBar" type="tween_to_state">
+						<arg name="stateName" value="default" />
+						<arg name="component" value="this" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+				</slider>
+				<button id="btnMute" left="57" skinClass="mute" skinSource="asset_c634" top="1">
+					<action evt="click" type="toggle_mute" />
+					<action evt="mouseOver" id="expandVolBar" type="tween_to_state">
+						<arg name="stateName" value="volumeExpanded" />
+						<arg name="component" value="container.volBar" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<action evt="mouseOver" type="cancel_delayed_actions">
+						<arg name="actionID" value="expandSeek" />
+						<arg name="actionID" value="shrinkVolBar" />
+					</action>
+					<action delay="0.3" evt="mouseOut" id="shrinkVolBar" type="tween_to_state">
+						<arg name="stateName" value="default" />
+						<arg name="component" value="container.volBar" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+				</button>
+				<shape bottom="25" height="80" id="volMask" left="59" type="rect" width="29">
+					<fill alpha="1" color="0xFFFF00" type="solid" />
+				</shape>
+				<container id="progressContainer" left="93" right="{playerAPI.variables.isHD ? 153 : 120}">
+
+
+					<progressBar alpha="1" height="7" id="buffer" left="0" position="{playerAPI.videoLoadedPercentage}" response="0.5" right="0" skinClass="bufferedBar" skinSource="asset_c634" top="9" />
+
+					<progressBar buttonMode="{playerAPI.isAllowSeek}" handleBar="{container.handleBar}" height="7" id="seek" left="0" position="{playerAPI.normalizedPlayheadTime}" response="0.5" right="0" skinClass="progressBar" skinSource="asset_c634" top="9">
+						<action evt="mouseDown" type="seek_video">
+							<arg name="value" value="{mouseX/(width*currentPosition)}" />
+							<arg name="showGUI" value="{playerAPI.variables.seekShowGUI}" />
+						</action>
+						<action evt="slide" type="seek_video">
+							<arg name="value" value="{sliderX/(width*currentPosition)}" />
+							<arg name="showGUI" value="{playerAPI.variables.seekShowGUI}" />
+							<arg name="resumePlaying" value="{playerAPI.variables.videoIsPlaying}" />
+						</action>
+						<action evt="slide" type="cancel_delayed_actions">
+							<arg name="actionID" value="minimizeTransportbar" />
+							<arg name="actionID" value="expandMiniTransportbar" />
+							<arg name="actionID" value="logoTwistRight" />
+							<arg name="actionID" value="logoUp" />
+						</action>
+					</progressBar>
+					<button id="handleBar" skinClass="progressBarHandle" skinSource="asset_c634" top="13" visible="{playerAPI.isAllowSeek}">
+						<action evt="mouseDown" type="set_property">
+							<arg value="playerAPI.variables.videoIsPlaying" />
+							<arg value="{playerAPI.isPlaying}" />
+						</action>
+						<action evt="mouseDown" type="pause_video" />
+					</button>
+				</container>
+				<button id="hd" right="119" skinClass="hd" skinSource="asset_c634" top="1" visible="{playerAPI.variables.isHD}" />
+				<button alpha="0.7" buttonMode="false" id="divider3" right="118" skinClass="divider" skinSource="asset_c634" top="3" visible="{playerAPI.variables.isHD}" />
+				<button buttonMode="false" id="share" right="87" skinClass="share" skinSource="asset_c634" top="1">
+					<action evt="mouseOver" type="cancel_delayed_actions">
+						<arg name="actionID" value="shareExpose" />
+						<arg name="actionID" value="shareHide" />
+						<arg name="actionID" value="shareIdle" />
+						<arg name="actionID" value="shareOver" />
+					</action>
+					<action evt="mouseOver" id="shareOver" type="set_property">
+						<arg value="playerAPI.playerMain.transportBar.share.skinParameter" />
+						<arg value="over" />
+					</action>
+					<action delay="0.3" evt="mouseOut" id="shareIdle" type="set_property">
+						<arg value="playerAPI.playerMain.transportBar.share.skinParameter" />
+						<arg value="idle" />
+					</action>
+					<action evt="mouseOver" id="shareExpose" type="tween_to_state">
+						<arg name="stateName" value="exposed" />
+						<arg name="component" value="container.shareContainer" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<action delay="0.3" evt="mouseOut" id="shareHide" type="tween_to_state">
+						<arg name="stateName" value="hidden" />
+						<arg name="component" value="container.shareContainer" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+				</button>
+				<shape bottom="25" height="85" id="shareMask" right="85" type="rect" width="36">
+					<fill alpha="1" color="0xFFFF00" type="solid" />
+				</shape>
+				<container id="shareContainer" mask="{container.shareMask}" right="85" top="1">
+					<shape height="85" id="fill" left="0" right="0" top="0" type="rect">
+						<fill alpha="0" color="0xFFFF00" type="solid" />
+					</shape>
+					<state stateName="hidden" top="1" />
+					<state stateName="exposed" top="-85" />
+					<action evt="mouseOver" type="cancel_delayed_actions">
+						<arg name="actionID" value="shareIdle" />
+						<arg name="actionID" value="shareOver" />
+						<arg name="actionID" value="shareExpose" />
+						<arg name="actionID" value="shareHide" />
+					</action>
+					<action delay="0.3" evt="mouseOver" id="shareOver" type="set_property">
+						<arg value="playerAPI.playerMain.transportBar.share.skinParameter" />
+						<arg value="over" />
+					</action>
+					<action delay="0.3" evt="mouseOut" id="shareIdle" type="set_property">
+						<arg value="playerAPI.playerMain.transportBar.share.skinParameter" />
+						<arg value="idle" />
+					</action>
+					<action evt="mouseOver" id="shareExpose" type="tween_to_state">
+						<arg name="stateName" value="exposed" />
+						<arg name="component" value="this" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<action delay="0.2" evt="mouseOut" id="shareHide" type="tween_to_state">
+						<arg name="stateName" value="hidden" />
+						<arg name="component" value="this" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<button id="shareFacebook" right="0" skinClass="FacebookShare" skinSource="asset_c634" top="43">
+						<action evt="mouseOver" type="cancel_delayed_actions">
+							<arg name="actionID" value="shareExpose" />
+							<arg name="actionID" value="shareHide" />
+						</action>
+						<action evt="click" type="share">
+							<arg name="method" value="facebook" />
+							<arg name="url" value="http://in.fm/v/Vk4RZM" />
+							<arg name="target" value="_blank" />
+							<arg name="pauseVideo" value="true" />
+						</action>
+					</button>
+					<button id="shareTwitter" right="0" skinClass="TwitterShare" skinSource="asset_c634" top="0">
+						<action evt="mouseOver" type="cancel_delayed_actions">
+							<arg name="actionID" value="shareExpose" />
+							<arg name="actionID" value="shareHide" />
+						</action>
+						<action evt="click" type="share">
+							<arg name="method" value="twitter" />
+							<arg name="url" value="http://in.fm/v/Vk4RZM" />
+							<arg name="target" value="_blank" />
+							<arg name="status" value="Talk To Strangers Rough Cut @InterludeVideo" />
+							<arg name="pauseVideo" value="true" />
+						</action>
+					</button>
+				</container>
+				<button alpha="0.7" buttonMode="false" id="divider4" right="85" skinClass="divider" skinSource="asset_c634" top="3" />
+				<button id="fullScreen" right="55" skinClass="fullScreen" skinSource="asset_c634" top="1" visible="{!playerAPI.isFullScreen}">
+					<action evt="click" type="toggle_fs" />
+					<action delay="0.1" evt="click" type="apply_state">
+						<arg name="stateName" value="minimized" />
+						<arg name="component" value="container" />
+					</action>
+					<action delay="0.1" evt="click" type="apply_state">
+						<arg name="stateName" value="expanded" />
+						<arg name="component" value="container.container.miniTransportBar" />
+					</action>
+				</button>
+				<button id="regScreen" right="55" skinClass="regScreen" skinSource="asset_c634" top="1" visible="{playerAPI.isFullScreen}">
+					<action evt="click" type="toggle_fs" />
+					<action delay="0.1" evt="click" type="apply_state">
+						<arg name="stateName" value="minimized" />
+						<arg name="component" value="container" />
+					</action>
+					<action delay="0.1" evt="click" type="apply_state">
+						<arg name="stateName" value="expanded" />
+						<arg name="component" value="container.container.miniTransportBar" />
+					</action>
+				</button>
+				<button alpha="0.7" buttonMode="false" id="divider5" right="53" skinClass="divider" skinSource="asset_c634" top="3" />
+			</container>
+			<container bottom="-30" height="30" id="miniTransportBar" left="0" right="0">
+				<state bottom="-30" stateName="minimized" />
+				<state bottom="0" stateName="expanded" />
+				<shape bottom="0" buttonMode="false" height="2" left="0" right="0" type="rect">
+					<fill alpha="0.8" color="0x131B28" type="solid" />
+				</shape>
+				<shape bottom="2" buttonMode="false" height="1" left="0" right="0" type="rect">
+					<fill alpha="1" color="0x131B28" type="solid" />
+				</shape>
+				<shape bottom="0" buttonMode="false" left="0" right="0" top="0" type="rect">
+					<fill alpha="0" color="0xFFFF00" type="solid" />
+					<action evt="mouseOver" type="cancel_delayed_actions">
+						<arg name="actionID" value="minimizeTransportbar" />
+						<arg name="actionID" value="expandMiniTransportbar" />
+						<arg name="actionID" value="logoTwistRight" />
+						<arg name="actionID" value="logoUp" />
+					</action>
+					<action evt="mouseOver" type="tween_to_state">
+						<arg name="stateName" value="expanded" />
+						<arg name="component" value="container.container.transportBar" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+					<action evt="mouseOver" type="tween_to_state">
+						<arg name="stateName" value="down" />
+						<arg name="component" value="playerAPI.playerMain.interludeLogo" />
+						<arg name="animationTime" value="0.3" />
+						<arg name="transitionType" value="easeOutSine" />
+					</action>
+					<action evt="mouseOver" type="set_property">
+						<arg value="playerAPI.playerMain.interludeLogo.skinParameter" />
+						<arg value="rotateLeft" />
+					</action>
+					<action evt="mouseOver" type="tween_to_state">
+						<arg name="stateName" value="minimized" />
+						<arg name="component" value="container" />
+						<arg name="animationTime" value="0.5" />
+					</action>
+				</shape>
+				<progressBar alpha="1" bottom="0" buttonMode="false" height="2" id="buffer" left="0" position="{playerAPI.videoLoadedPercentage}" response="0.2" right="0" skinClass="bufferedBar" skinSource="asset_c634" />
+				<progressBar bottom="0" buttonMode="false" height="2" id="seek" left="0" position="{playerAPI.videoPercentage}" response="0.2" right="0" skinClass="miniProgressBar" skinSource="asset_c634" />
+			</container>
+
+			<button bottom="-4" id="interludeLogo" right="5" skinClass="Logo" skinSource="asset_c634">
+				<state alpha="0.6" bottom="10" stateName="up" />
+				<state alpha="1" bottom="-4" stateName="down" />
+				<action evt="mouseOver" type="cancel_delayed_actions">
+					<arg name="actionID" value="minimizeTransportbar" />
+					<arg name="actionID" value="expandMiniTransportbar" />
+					<arg name="actionID" value="logoTwistRight" />
+					<arg name="actionID" value="logoUp" />
+				</action>
+				<action delay="0.3" evt="mouseOut" id="logoUp" type="tween_to_state">
+					<arg name="stateName" value="up" />
+					<arg name="component" value="this" />
+					<arg name="animationTime" value="0.5" />
+					<arg name="transitionType" value="easeOutCubic" />
+				</action>
+				<action delay="0.3" evt="mouseOut" id="minimizeTransportbar" type="tween_to_state">
+					<arg name="stateName" value="expanded" />
+					<arg name="component" value="container.miniTransportBar" />
+					<arg name="animationTime" value="0.5" />
+				</action>
+				<action delay="0.3" evt="mouseOut" id="expandMiniTransportbar" type="tween_to_state">
+					<arg name="stateName" value="minimized" />
+					<arg name="component" value="container.transportBar" />
+					<arg name="animationTime" value="0.5" />
+				</action>
+				<action evt="click" type="open_url">
+					<arg name="url" value="http://www.interlude.fm" />
+					<arg name="target" value="_blank" />
+					<arg name="reportName" value="interlude_from_watermark" />
+					<arg name="pauseVideo" value="true" />
+				</action>
+			</button>
+		</container>
+	</gui>
+</project>
