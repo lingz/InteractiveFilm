@@ -213,6 +213,8 @@ var VoteScreen = React.createClass({
       alpha = 0,
       pi = Math.PI,
       t = 10;
+    if (this.props.event.node == "node_beginning_c761")
+      t = 15;
 
     (function draw() {
       alpha++;
@@ -261,8 +263,6 @@ var VoteScreen = React.createClass({
         image = "/img/7.png";
         break;
     }
-    console.log("rerendering")
-    console.log(this.state)
     var backgroundImage = {
       "background-image": "url(" + image +")"
     };

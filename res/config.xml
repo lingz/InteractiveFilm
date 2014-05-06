@@ -58,7 +58,7 @@
 		</group>
 		<group groupName="TREE STRUCTURE">
 			<node builderX="268" builderY="-87" id="node_beginning_c761" isHead="true" name="Beginning" segment="video_0_dolly_c2656" uid="0a5333c6-9bce-11e3-bb8c-6db668a11d4f">
-				<decision alwaysAppear="true" gui="beginning_container_c1040" guiAppearTime="24519">
+				<decision alwaysAppear="true" gui="beginning_container_c1040" guiAppearTime="21094">
 					<child target="node_william_c783" uid="0f540660-9bce-11e3-bb8c-6db668a11d4f">
 						<decisionButton id="william_button_c1050" isAutoStateUpdate="true" />
 					</child>
@@ -66,7 +66,7 @@
 						<decisionButton id="allison_button_c1064" isAutoStateUpdate="true" />
 					</child>
 				</decision>
-				<cuePoint time="19519" type="launchJS">
+				<cuePoint time="21094" type="launchJS">
 					<arg name="expression" value="interlude.trigger('playback.vote.start', 'node_beginning_c761', 'false', '{playerAPI.variables.playerID}');" />
 				</cuePoint>
 				<cuePoint time="31369" type="launchJS">
