@@ -107,3 +107,7 @@ h2 {
 #home {
   height: 250px;
 }
+
+* {
+  cursor: none !important;
+}
