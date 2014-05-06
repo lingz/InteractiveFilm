@@ -10,7 +10,7 @@ var WelcomeScreen = React.createClass({
     });
     return(
       <div className="container welcome centered-text">
-        <h1>Two Strangers</h1>
+        <h1>Two Strangers Meet in a Bar</h1>
         <p>Use your device to influence the path of the film.</p>
         <p>Your device will automatically display options when a choice is to be made.</p>
         <p>Tap the left or right half of the screen to guide the characters.</p>
@@ -25,10 +25,10 @@ var EndScreen = React.createClass({
   render: function() {
     return(
       <div className="container credits centered-text">
-        <h1>Two Strangers</h1>
+        <h1>Two Strangers Meet in a Bar</h1>
 
         <div className="credit-block">
-          <h4>Written and Directed By</h4>
+          <h4>Written and Directed by</h4>
           <h2>Máté Bede-Fazekas</h2>
           <h2>Nolan Funk</h2>
         </div>
@@ -54,6 +54,9 @@ var EndScreen = React.createClass({
           <h4>William</h4>
           <h2>Máté Bede-Fazekas</h2>
 
+          <h4>Bartender</h4>
+          <h2>Attilio Rigotti</h2>
+
           <h4>Boyfriend</h4>
           <h2>Yannick Trapman-O'brien</h2>
 
@@ -61,7 +64,7 @@ var EndScreen = React.createClass({
           <h2>Megan Vincent</h2>
 
           <h4>Mistress</h4>
-          <h2>Julia Sauiber</h2>
+          <h2>Julia Saubier</h2>
 
           <h4>Concierge</h4>
           <h2>Shivram Giri</h2>
@@ -89,7 +92,7 @@ var EndScreen = React.createClass({
         </div>
 
         <div className="credit-block">
-          <h4>Costume and make­up</h4>
+          <h4>Costume and Make-up</h4>
           <h2>Adam Pivirotto</h2>
           <h2>Megan Vincent</h2>
         </div>
@@ -110,7 +113,7 @@ var EndScreen = React.createClass({
         </div>
 
         <div className="credit-block">
-          <h4>Gaffer/Key grip</h4>
+          <h4>Gaffer/Key Grip</h4>
           <h2>David Woolner</h2>
         </div>
 
@@ -139,7 +142,7 @@ var EndScreen = React.createClass({
         </div>
 
         <div className="credit-block">
-          <h4>Production Assistants</h4>
+          <h4>Special Thanks</h4>
           <h2>Hilah Almog</h2>
           <h2>Alana Barraj</h2>
           <h2>Eric Baukhages</h2>
@@ -149,7 +152,7 @@ var EndScreen = React.createClass({
           <h2>Scott Fitzgerald</h2>
           <h2>Alexis Gambis</h2>
           <h2>Dale Hudson</h2>
-          <h2>Seung­Hoon Jeong</h2>
+          <h2>Seung-Hoon Jeong</h2>
           <h2>Amos Ezra Katz</h2>
           <h2>Nikolai Kozak</h2>
           <h2>Joi Lee</h2>
@@ -194,17 +197,14 @@ var IdleScreen = React.createClass({
 var VoteScreen = React.createClass({
   getInitialState: function() {
     return {
-      voted: false
+      vote: -1
     };
   },
   vote: function(choice) {
     var self = this;
     return function() {
+      self.setState({vote: choice});
       interlude.trigger('playback.vote', self.props.event.node, self.props.event.options[choice].node, currentPlayerId);
-      React.renderComponent(
-        <IdleScreen />,
-        document.getElementById("main")
-      );
     };
   },
   componentDidMount: function() {
@@ -261,20 +261,32 @@ var VoteScreen = React.createClass({
         image = "/img/7.png";
         break;
     }
-    var style = {
+    console.log("rerendering")
+    console.log(this.state)
+    var backgroundImage = {
       "background-image": "url(" + image +")"
     };
+    var leftVoteStyle = {};
+    var rightVoteStyle = {};
+    switch (this.state.vote) {
+      case 0:
+        rightVoteStyle.opacity = 0.7;
+        break;
+      case 1:
+        leftVoteStyle.opacity = 0.7;
+        break;
+    }
+    var voteTimer = 
+      <svg className="timeout" width="50" height="50" viewbox="0 0 50 50">
+        <path id="loader" transform="translate(25, 25) scale(.84)"/>
+      </svg>;
     return(
-      <div className="container vote-image" style={style}>
-        <div className="vote-first vote" onClick={this.vote(0)}>
-          <h2 className="button">{this.props.event.options[0].display}</h2>
+      <div className="container vote-image" style={backgroundImage}>
+        <div className="vote-first vote" onClick={this.vote(0)} style={leftVoteStyle}>
         </div>
-        <div className="vote-right vote" onClick={this.vote(1)}>
-          <h2 className="button">{this.props.event.options[1].display}</h2>
+        <div className="vote-right vote" onClick={this.vote(1)} style={rightVoteStyle}>
         </div>
-        <svg className="timeout" width="50" height="50" viewbox="0 0 50 50">
-          <path id="loader" transform="translate(25, 25) scale(.84)"/>
-        </svg>
+        {this.state.vote == - 1 ? voteTimer : null}
       </div>
     );
   }

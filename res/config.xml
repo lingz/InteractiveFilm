@@ -78,11 +78,11 @@
 			</node>
 			<node builderX="493" builderY="-241" id="node_william_c783" name="William" segment="video_1_william_c2761" uid="0f527fc0-9bce-11e3-bb8c-6db668a11d4f">
 				<decision alwaysAppear="true" gui="william_container_c1140" guiAppearTime="109020">
-					<child target="node_ring_c818" uid="67bf85e0-9bce-11e3-bb8c-6db668a11d4f">
-						<decisionButton id="ring_button_c1150" isAutoStateUpdate="true" />
-					</child>
 					<child target="node_no_ring_c825" uid="68b53081-9bce-11e3-bb8c-6db668a11d4f">
 						<decisionButton id="no_ring_button_c1164" isAutoStateUpdate="true" />
+					</child>
+					<child target="node_ring_c818" uid="67bf85e0-9bce-11e3-bb8c-6db668a11d4f">
+						<decisionButton id="ring_button_c1150" isAutoStateUpdate="true" />
 					</child>
 				</decision>
 				<cuePoint time="109020" type="launchJS">
@@ -119,11 +119,11 @@
 			<node builderX="943" builderY="303" id="node_stay_c811" name="Stay" segment="video_2_1_1_allison_no_boyfriend_stay_c3049" uid="3c41af00-9bcf-11e3-bb8c-6db668a11d4f" />
 			<node builderX="718" builderY="-185" id="node_ring_c818" name="Ring" segment="video_1_1_william_ring_c2701" uid="67bf5ed0-9bce-11e3-bb8c-6db668a11d4f">
 				<decision alwaysAppear="true" gui="ring_container_c1230" guiAppearTime="104600">
-					<child target="node_ring_c853" uid="8f87b251-9bce-11e3-bb8c-6db668a11d4f">
-						<decisionButton id="ring_button_c1240" isAutoStateUpdate="true" />
-					</child>
 					<child target="node_no_ring_c860" uid="8fe20751-9bce-11e3-bb8c-6db668a11d4f">
 						<decisionButton id="no_ring_button_c1254" isAutoStateUpdate="true" />
+					</child>
+					<child target="node_ring_c853" uid="8f87b251-9bce-11e3-bb8c-6db668a11d4f">
+						<decisionButton id="ring_button_c1240" isAutoStateUpdate="true" />
 					</child>
 				</decision>
 				<cuePoint time="104600" type="launchJS">
@@ -138,11 +138,11 @@
 			</node>
 			<node builderX="718" builderY="-451" id="node_no_ring_c825" name="No Ring" segment="video_1_2_william_no_ring_c2746" uid="68b53080-9bce-11e3-bb8c-6db668a11d4f">
 				<decision alwaysAppear="true" gui="no_ring_container_c1268" guiAppearTime="107890">
-					<child target="node_drink_c867" uid="e9f395b1-9bce-11e3-bb8c-6db668a11d4f">
-						<decisionButton id="drink_button_c1278" isAutoStateUpdate="true" />
-					</child>
 					<child target="node_hand_c874" uid="edce85f1-9bce-11e3-bb8c-6db668a11d4f">
 						<decisionButton id="hand_button_c1292" isAutoStateUpdate="true" />
+					</child>
+					<child target="node_drink_c867" uid="e9f395b1-9bce-11e3-bb8c-6db668a11d4f">
+						<decisionButton id="drink_button_c1278" isAutoStateUpdate="true" />
 					</child>
 				</decision>
 				<cuePoint time="107890" type="launchJS">
@@ -157,11 +157,11 @@
 			</node>
 			<node builderX="718" builderY="18" id="node_boyfriend_c832" name="Boyfriend" segment="video_2_2_allison_boyfriend_c3124" uid="69ad4c20-9bce-11e3-bb8c-6db668a11d4f">
 				<decision alwaysAppear="true" gui="boyfriend_container_c1078" guiAppearTime="84699">
-					<child target="node_boyfriend_c797" uid="12fd42d1-9bcf-11e3-bb8c-6db668a11d4f">
-						<decisionButton id="boyfriend_button_c1088" isAutoStateUpdate="true" />
-					</child>
 					<child target="node_william_c804" uid="13c01da1-9bcf-11e3-bb8c-6db668a11d4f">
 						<decisionButton id="william_button_c1102" isAutoStateUpdate="true" />
+					</child>
+					<child target="node_boyfriend_c797" uid="12fd42d1-9bcf-11e3-bb8c-6db668a11d4f">
+						<decisionButton id="boyfriend_button_c1088" isAutoStateUpdate="true" />
 					</child>
 				</decision>
 				<cuePoint time="84699" type="launchJS">
@@ -176,11 +176,11 @@
 			</node>
 			<node builderX="718" builderY="268" id="node_no_boyfriend_c839" name="No Boyfriend" segment="video_2_1_allison_no_boyfriend_c3079" uid="6a6662f0-9bce-11e3-bb8c-6db668a11d4f">
 				<decision alwaysAppear="true" gui="no_boyfriend_container_c1116" guiAppearTime="181760">
-					<child target="node_stay_c811" uid="3c41af01-9bcf-11e3-bb8c-6db668a11d4f">
-						<decisionButton id="stay_button_c1126" isAutoStateUpdate="true" />
-					</child>
 					<child target="node_leave_c846" uid="730097d0-cb14-11e3-9505-b56ae4d59878">
 						<decisionButton id="leave_button_c1216" isAutoStateUpdate="true" />
+					</child>
+					<child target="node_stay_c811" uid="3c41af01-9bcf-11e3-bb8c-6db668a11d4f">
+						<decisionButton id="stay_button_c1126" isAutoStateUpdate="true" />
 					</child>
 				</decision>
 				<cuePoint time="181760" type="launchJS">
@@ -212,12 +212,12 @@
 					<arg value="false" />
 				</action>
 			</timer>
-			<button alpha="0.66" height="71" id="allison_button_c1064" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Allison" uid="0f5bf5a0-9bce-11e3-bb8c-6db668a11d4f" visible="false" width="118" x="472" y="318">
+			<button alpha="0.66" height="71" id="allison_button_c1064" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Allison" uid="0f5bf5a0-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="118" x="472" y="318">
 				<action delay="0" evt="click" keyCode="0" type="node_select">
 					<arg name="node" value="node_allison_c790" />
 				</action>
 			</button>
-			<button alpha="0.69" height="71" id="william_button_c1050" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="William" uid="0f57d6f0-9bce-11e3-bb8c-6db668a11d4f" visible="false" width="128" x="251" y="318">
+			<button alpha="0.69" height="71" id="william_button_c1050" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="William" uid="0f57d6f0-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="128" x="251" y="318">
 				<action delay="0" evt="click" keyCode="0" type="node_select">
 					<arg name="node" value="node_william_c783" />
 				</action>
@@ -235,7 +235,7 @@
 				<progressBar visible="false" height="40" id="start_screen_progress_bar_c976" position="0" skinClass="loading" skinSource="asset_c474" uid="0a530cb3-9bce-11e3-bb8c-6db668a11d4f" width="36" x="423" y="240" alpha="0" />
 			</container>
 		</container>
-		<container bottom="0" fadeInDuration="1" fadeOutDuration="0.8" id="end_screen_container_c980" left="0" right="0" top="0" type="endScreen">
+		<container visible="false" bottom="0" fadeInDuration="1" fadeOutDuration="0.8" id="end_screen_container_c980" left="0" right="0" top="0" type="endScreen">
 			<shape bottom="0" left="0" right="0" top="0" type="rect">
 				<fill color="0x131B27" type="solid" />
 			</shape>
@@ -275,12 +275,12 @@
 					<arg value="false" />
 				</action>
 			</timer>
-			<button alpha="0.69" height="71" id="ring_button_c1150" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Ring" uid="67c9bf10-9bce-11e3-bb8c-6db668a11d4f" visible="false" width="125" x="546" y="311">
+			<button alpha="0.69" height="71" id="ring_button_c1150" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Ring" uid="67c9bf10-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="125" x="546" y="311">
 				<action delay="0" evt="click" keyCode="0" type="node_select">
 					<arg name="node" value="node_ring_c818" />
 				</action>
 			</button>
-			<button alpha="0.65" height="71" id="no_ring_button_c1164" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="No Ring" uid="68bc5c70-9bce-11e3-bb8c-6db668a11d4f" visible="false" width="138" x="180" y="311">
+			<button alpha="0.65" height="71" id="no_ring_button_c1164" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="No Ring" uid="68bc5c70-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="138" x="180" y="311">
 				<action delay="0" evt="click" keyCode="0" type="node_select">
 					<arg name="node" value="node_no_ring_c825" />
 				</action>
@@ -297,12 +297,12 @@
 					<arg value="false" />
 				</action>
 			</timer>
-			<button alpha="0.69" height="71" id="no_boyfriend_button_c1202" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="No Boyfriend" uid="6a6b1de0-9bce-11e3-bb8c-6db668a11d4f" visible="false" width="201" x="508" y="336">
+			<button alpha="0.69" height="71" id="no_boyfriend_button_c1202" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="No Boyfriend" uid="6a6b1de0-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="201" x="508" y="336">
 				<action delay="0" evt="click" keyCode="0" type="node_select">
 					<arg name="node" value="node_no_boyfriend_c839" />
 				</action>
 			</button>
-			<button alpha="0.69" height="71" id="boyfriend_button_c1188" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Boyfriend" uid="69b47810-9bce-11e3-bb8c-6db668a11d4f" visible="false" width="193" x="110" y="336">
+			<button alpha="0.69" height="71" id="boyfriend_button_c1188" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Boyfriend" uid="69b47810-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="193" x="110" y="336">
 				<action delay="0" evt="click" keyCode="0" type="node_select">
 					<arg name="node" value="node_boyfriend_c832" />
 				</action>
@@ -319,12 +319,12 @@
 					<arg value="false" />
 				</action>
 			</timer>
-			<button alpha="0.66" height="71" id="ring_button_c1240" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Ring" uid="8f912830-9bce-11e3-bb8c-6db668a11d4f" visible="false" width="132" x="490" y="310">
+			<button alpha="0.66" height="71" id="ring_button_c1240" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Ring" uid="8f912830-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="132" x="490" y="310">
 				<action delay="0" evt="click" keyCode="0" type="node_select">
 					<arg name="node" value="node_ring_c853" />
 				</action>
 			</button>
-			<button alpha="0.66" height="71" id="no_ring_button_c1254" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="No Ring" uid="8fe95a50-9bce-11e3-bb8c-6db668a11d4f" visible="false" width="138" x="230" y="310">
+			<button alpha="0.66" height="71" id="no_ring_button_c1254" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="No Ring" uid="8fe95a50-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="138" x="230" y="310">
 				<action delay="0" evt="click" keyCode="0" type="node_select">
 					<arg name="node" value="node_no_ring_c860" />
 				</action>
@@ -341,12 +341,12 @@
 					<arg value="false" />
 				</action>
 			</timer>
-			<button alpha="0.72" height="71" id="drink_button_c1278" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Drink" uid="ea023bb0-9bce-11e3-bb8c-6db668a11d4f" visible="false" width="102" x="537" y="306">
+			<button alpha="0.72" height="71" id="drink_button_c1278" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Drink" uid="ea023bb0-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="102" x="537" y="306">
 				<action delay="0" evt="click" keyCode="0" type="node_select">
 					<arg name="node" value="node_drink_c867" />
 				</action>
 			</button>
-			<button alpha="0.69" height="71" id="hand_button_c1292" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Hand" uid="edd9a980-9bce-11e3-bb8c-6db668a11d4f" visible="false" width="110" x="185" y="306">
+			<button alpha="0.69" height="71" id="hand_button_c1292" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Hand" uid="edd9a980-9bce-11e3-bb8c-6db668a11d4f" visible="true" width="110" x="185" y="306">
 				<action delay="0" evt="click" keyCode="0" type="node_select">
 					<arg name="node" value="node_hand_c874" />
 				</action>
@@ -363,12 +363,12 @@
 					<arg value="false" />
 				</action>
 			</timer>
-			<button alpha="0.66" height="71" id="boyfriend_button_c1088" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Boyfriend" uid="130c36f0-9bcf-11e3-bb8c-6db668a11d4f" visible="false" width="158" x="590" y="303">
+			<button alpha="0.66" height="71" id="boyfriend_button_c1088" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Boyfriend" uid="130c36f0-9bcf-11e3-bb8c-6db668a11d4f" visible="true" width="158" x="590" y="303">
 				<action delay="0" evt="click" keyCode="0" type="node_select">
 					<arg name="node" value="node_boyfriend_c797" />
 				</action>
 			</button>
-			<button alpha="0.71" height="71" id="william_button_c1102" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="William" uid="13cca0c0-9bcf-11e3-bb8c-6db668a11d4f" visible="false" width="158" x="129" y="303">
+			<button alpha="0.71" height="71" id="william_button_c1102" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="William" uid="13cca0c0-9bcf-11e3-bb8c-6db668a11d4f" visible="true" width="158" x="129" y="303">
 				<action delay="0" evt="click" keyCode="0" type="node_select">
 					<arg name="node" value="node_william_c804" />
 				</action>
@@ -385,12 +385,12 @@
 					<arg value="false" />
 				</action>
 			</timer>
-			<button alpha="0.66" height="71" id="stay_button_c1126" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Stay" uid="3c518d80-9bcf-11e3-bb8c-6db668a11d4f" visible="false" width="118" x="601" y="294">
+			<button alpha="0.66" height="71" id="stay_button_c1126" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Stay" uid="3c518d80-9bcf-11e3-bb8c-6db668a11d4f" visible="true" width="118" x="601" y="294">
 				<action delay="0" evt="click" keyCode="0" type="node_select">
 					<arg name="node" value="node_stay_c811" />
 				</action>
 			</button>
-			<button alpha="0.69" height="71" id="leave_button_c1216" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Leave" uid="72facb71-cb14-11e3-9505-b56ae4d59878" visible="false" width="118" x="156" y="294">
+			<button alpha="0.69" height="71" id="leave_button_c1216" skinClass="Skin" skinParameter="white" skinSource="asset_c145" text="Leave" uid="72facb71-cb14-11e3-9505-b56ae4d59878" visible="true" width="118" x="156" y="294">
 				<action delay="0" evt="click" keyCode="0" type="node_select">
 					<arg name="node" value="node_leave_c846" />
 				</action>
