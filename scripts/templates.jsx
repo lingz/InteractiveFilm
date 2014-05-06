@@ -212,9 +212,14 @@ var VoteScreen = React.createClass({
     var loader = document.getElementById('loader'),
       alpha = 0,
       pi = Math.PI,
-      t = 10;
-    if (this.props.event.node == "node_beginning_c761")
       t = 15;
+      //if ($.inArray(this.props.event.node,
+        //["node_beginning_c761",
+         //"node_william_c783",
+         //"node_boyfriend_c832",
+         //"node_allison_c790",
+          //]) > 0)
+      //t = 15;
 
     (function draw() {
       alpha++;
