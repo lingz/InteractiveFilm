@@ -66,7 +66,7 @@
 						<decisionButton id="allison_button_c1064" isAutoStateUpdate="true" />
 					</child>
 				</decision>
-				<cuePoint time="24519" type="launchJS">
+				<cuePoint time="19519" type="launchJS">
 					<arg name="expression" value="interlude.trigger('playback.vote.start', 'node_beginning_c761', 'false', '{playerAPI.variables.playerID}');" />
 				</cuePoint>
 				<cuePoint time="31369" type="launchJS">
