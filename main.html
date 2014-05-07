@@ -10,6 +10,13 @@
         <div id="home" class="absolute-center absolute-center-text">
           <h1>Two Strangers Meet in a Bar</h1>
           <h2>http://twostrangersfilm.com</h2>
+          {% if username and password %}
+          <div class="wifi">
+            <h3>Wifi: <span>nyuguest</span></h3>
+            <h4>User: <span>{{username}}</span></h4>
+            <h4>Password: <span>{{password}}</span></h4>
+          </div>
+          {% end %}
           <h1 id="player_count">0</h1>
           <h2>Connected</h2>
         </div>
