@@ -50,13 +50,12 @@ class ServerHandler(tornado.web.RequestHandler):
     self.datastore["id"] = newId
     self.write("Success")
 
-@require_basic_auth
 class MyFileHandler(tornado.web.StaticFileHandler):
   def initialize(self, path):
     self.dirname, self.filename = os.path.split(path)
     super(MyFileHandler, self).initialize(self.dirname)
 
-  def get(self, isAuthenticated, path=None, include_body=True):
+  def get(self, path=None, include_body=True):
     if isAuthenticated:
       super(MyFileHandler, self).get(self.filename, include_body)
 
@@ -67,11 +66,13 @@ class IndexHandler(tornado.web.RequestHandler):
   def get(self, **kwargs):
     self.render("index.html", idNum=self.datastore["id"])
 
+@require_basic_auth
 class MainHandler(tornado.web.RequestHandler):
-  def get(self):
-    username = self.get_argument("user", None)
-    password = self.get_argument("pass", None)
-    self.render("main.html", username=username, password=password)
+  def get(self, isAuthenticated):
+    if isAuthenticated:
+      username = self.get_argument("user", None)
+      password = self.get_argument("pass", None)
+      self.render("main.html", username=username, password=password)
 
 def main():
   application = tornado.web.Application(
