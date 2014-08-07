@@ -105,7 +105,25 @@ h2 {
 }
 
 #home {
-  height: 250px;
+  height: 350px;
+}
+
+.wifi {
+  margin-top: 50px;
+}
+
+.wifi h3 {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.wifi h4 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.wifi span {
+  font-size: 1.5em;
 }
 
 * {

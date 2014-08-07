@@ -67,12 +67,17 @@ class IndexHandler(tornado.web.RequestHandler):
   def get(self, **kwargs):
     self.render("index.html", idNum=self.datastore["id"])
 
+class MainHandler(tornado.web.RequestHandler):
+  def get(self):
+    username = self.get_argument("user", None)
+    password = self.get_argument("pass", None)
+    self.render("main.html", username=username, password=password)
 
 def main():
   application = tornado.web.Application(
       handlers = [
       (r'/', IndexHandler, dict(datastore = datastore)),
-      (r'/main', MyFileHandler, {'path': "./main.html"}),
+      (r'/main', MainHandler),
       (r"/server", ServerHandler, dict(datastore = datastore)),
       (r'/(.*)', tornado.web.StaticFileHandler, {'path': "./"}),
       ],
