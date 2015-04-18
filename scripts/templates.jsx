@@ -142,6 +142,20 @@ var EndScreen = React.createClass({
         </div>
 
         <div className="credit-block">
+          <h2>"Your Eyes"</h2>
+          <h2>Words and music by Charmin Michelle and Keith Boyles</h2>
+          <h2>Performed by Charmin Michelle</h2>
+          <br/>
+          <h2>"It Could Only Be Love"</h2>
+          <h2>Words and music by Charmin Michelle and Keith Boyles</h2>
+          <h2>Performed by Charmin Michelle</h2>
+          <br/>
+          <h2>"Return of Love"</h2>
+          <h2>Words and music by Charmin Michelle and Keith Boyles</h2>
+          <h2>Performed by Charmin Michelle</h2>
+        </div>
+
+        <div className="credit-block">
           <h4>Special Thanks</h4>
           <h2>Hilah Almog</h2>
           <h2>Alana Barraj</h2>
@@ -236,10 +250,10 @@ var VoteScreen = React.createClass({
       if (alpha < 359)
         setTimeout(draw, t); // Redraw
       else {
-        //React.renderComponent(
-          //<IdleScreen />,
-          //document.getElementById("main")
-        //);
+        React.renderComponent(
+          <IdleScreen />,
+          document.getElementById("main")
+        );
       }
     })();
   },
