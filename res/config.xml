@@ -78,11 +78,11 @@
                         </node>
                         <node builderX="493" builderY="-241" id="node_william_c783" name="William" segment="video_1_william_c2761" uid="0f527fc0-9bce-11e3-bb8c-6db668a11d4f">
                                 <decision alwaysAppear="true" gui="william_container_c1140" guiAppearTime="109020">
-                                        <child target="node_ring_c818" uid="67bf85e0-9bce-11e3-bb8c-6db668a11d4f">
-                                                <decisionButton id="ring_button_c1150" isAutoStateUpdate="true" />
-                                        </child>
                                         <child target="node_no_ring_c825" uid="68b53081-9bce-11e3-bb8c-6db668a11d4f">
                                                 <decisionButton id="no_ring_button_c1164" isAutoStateUpdate="true" />
+                                        </child>
+                                        <child target="node_ring_c818" uid="67bf85e0-9bce-11e3-bb8c-6db668a11d4f">
+                                                <decisionButton id="ring_button_c1150" isAutoStateUpdate="true" />
                                         </child>
                                 </decision>
                                 <cuePoint time="109020" type="launchJS">
@@ -119,11 +119,11 @@
                         <node builderX="943" builderY="303" id="node_stay_c811" name="Stay" segment="video_2_1_1_allison_no_boyfriend_stay_c3049" uid="3c41af00-9bcf-11e3-bb8c-6db668a11d4f" />
                         <node builderX="718" builderY="-185" id="node_ring_c818" name="Ring" segment="video_1_1_william_ring_c2701" uid="67bf5ed0-9bce-11e3-bb8c-6db668a11d4f">
                                 <decision alwaysAppear="true" gui="ring_container_c1230" guiAppearTime="104600">
-                                        <child target="node_ring_c853" uid="8f87b251-9bce-11e3-bb8c-6db668a11d4f">
-                                                <decisionButton id="ring_button_c1240" isAutoStateUpdate="true" />
-                                        </child>
                                         <child target="node_no_ring_c860" uid="8fe20751-9bce-11e3-bb8c-6db668a11d4f">
                                                 <decisionButton id="no_ring_button_c1254" isAutoStateUpdate="true" />
+                                        </child>
+                                        <child target="node_ring_c853" uid="8f87b251-9bce-11e3-bb8c-6db668a11d4f">
+                                                <decisionButton id="ring_button_c1240" isAutoStateUpdate="true" />
                                         </child>
                                 </decision>
                                 <cuePoint time="104600" type="launchJS">
@@ -138,11 +138,11 @@
                         </node>
                         <node builderX="718" builderY="-451" id="node_no_ring_c825" name="No Ring" segment="video_1_2_william_no_ring_c2746" uid="68b53080-9bce-11e3-bb8c-6db668a11d4f">
                                 <decision alwaysAppear="true" gui="no_ring_container_c1268" guiAppearTime="107890">
-                                        <child target="node_drink_c867" uid="e9f395b1-9bce-11e3-bb8c-6db668a11d4f">
-                                                <decisionButton id="drink_button_c1278" isAutoStateUpdate="true" />
-                                        </child>
                                         <child target="node_hand_c874" uid="edce85f1-9bce-11e3-bb8c-6db668a11d4f">
                                                 <decisionButton id="hand_button_c1292" isAutoStateUpdate="true" />
+                                        </child>
+                                        <child target="node_drink_c867" uid="e9f395b1-9bce-11e3-bb8c-6db668a11d4f">
+                                                <decisionButton id="drink_button_c1278" isAutoStateUpdate="true" />
                                         </child>
                                 </decision>
                                 <cuePoint time="107890" type="launchJS">
@@ -157,11 +157,11 @@
                         </node>
                         <node builderX="718" builderY="18" id="node_boyfriend_c832" name="Boyfriend" segment="video_2_2_allison_boyfriend_c3124" uid="69ad4c20-9bce-11e3-bb8c-6db668a11d4f">
                                 <decision alwaysAppear="true" gui="boyfriend_container_c1078" guiAppearTime="84699">
-                                        <child target="node_boyfriend_c797" uid="12fd42d1-9bcf-11e3-bb8c-6db668a11d4f">
-                                                <decisionButton id="boyfriend_button_c1088" isAutoStateUpdate="true" />
-                                        </child>
                                         <child target="node_william_c804" uid="13c01da1-9bcf-11e3-bb8c-6db668a11d4f">
                                                 <decisionButton id="william_button_c1102" isAutoStateUpdate="true" />
+                                        </child>
+                                        <child target="node_boyfriend_c797" uid="12fd42d1-9bcf-11e3-bb8c-6db668a11d4f">
+                                                <decisionButton id="boyfriend_button_c1088" isAutoStateUpdate="true" />
                                         </child>
                                 </decision>
                                 <cuePoint time="84699" type="launchJS">
@@ -176,11 +176,11 @@
                         </node>
                         <node builderX="718" builderY="268" id="node_no_boyfriend_c839" name="No Boyfriend" segment="video_2_1_allison_no_boyfriend_c3079" uid="6a6662f0-9bce-11e3-bb8c-6db668a11d4f">
                                 <decision alwaysAppear="true" gui="no_boyfriend_container_c1116" guiAppearTime="181760">
-                                        <child target="node_stay_c811" uid="3c41af01-9bcf-11e3-bb8c-6db668a11d4f">
-                                                <decisionButton id="stay_button_c1126" isAutoStateUpdate="true" />
-                                        </child>
                                         <child target="node_leave_c846" uid="730097d0-cb14-11e3-9505-b56ae4d59878">
                                                 <decisionButton id="leave_button_c1216" isAutoStateUpdate="true" />
+                                        </child>
+                                        <child target="node_stay_c811" uid="3c41af01-9bcf-11e3-bb8c-6db668a11d4f">
+                                                <decisionButton id="stay_button_c1126" isAutoStateUpdate="true" />
                                         </child>
                                 </decision>
                                 <cuePoint time="181760" type="launchJS">
